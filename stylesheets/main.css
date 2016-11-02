@@ -1,0 +1,40 @@
+/*
+Custom CSS bovenop Bootstrap
+TODO OMVORMEN NAAR SASS of LESS
+*/
+
+.ph-custom {
+    border-bottom: 0.5px solid darkgrey;
+}
+
+.ph-custom-inline {
+    border-bottom: 0.5px solid darkgrey;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.ph-custom-inline-no-padding {
+    border-bottom: 0.5px solid darkgrey;
+}
+
+.ph-custom-inline-no-line {
+    padding-top: 4em;
+    padding-bottom: 1em;
+}
+
+.ph-text-custom {
+    text-align: center;
+}
+
+.viewContainer {
+    margin-top: 0.2em;
+}
+
+.checkboxPadding {
+    padding-right: 1em;
+}
+
+.warning-span {
+    margin-bottom: 5px;
+    display: block;
+}

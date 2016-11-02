@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overzicht formules van providers</title>
+</head>
+<body>
+<div class="container" ng-show="levserviceCtrl.error">
+    <b>{{levserviceCtrl.errorMsg}}</b>
+</div>
+<div>
+    <form class="ph-custom-inline">
+        <button ng-click="levserviceCtrl.getTarieven()" type="button" class="btn btn-default">Zoek alle tarieven</button>
+        <button ng-click="levserviceCtrl.clearSelection()" type="button" class="btn btn-danger">Reset</button>
+    </form>
+    <div ng-show="levserviceCtrl.tarieven" class="table-responsive">
+        <h3>Zoekresultaten</h3>
+        <table class="table table-hover">
+            <tr>
+                <th><b>Naam</b></th>
+                <th><b>Basisprijs in euro</b></th>
+                <th><b>Provider</b></th>
+                <th><b>Groene stroom</b></th>
+                <th><b>Link</b></th>
+            </tr>
+            <tr ng-repeat="tarief in levserviceCtrl.tarieven | orderBy: 'tarief.basisprijs'">
+                <td>{{tarief.naam}}</td>
+                <td>{{tarief.basisprijs}}</td>
+                <td>{{tarief.provider}}</td>
+                <td>
+                    <span ng-if="tarief.groen === true" class="glyphicon glyphicon-ok"></span>
+                    <span ng-if="tarief.groen === false" class="glyphicon glyphicon-remove"></span>
+                </td>
+                <td>
+                    <a ng-href="#/detailtransactie/{{log.id}}">Details</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

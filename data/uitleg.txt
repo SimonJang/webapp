@@ -1,0 +1,2 @@
+Dummy informatie voor demonstratie app
+Anders wordt de informatie gebruikt van de REST service

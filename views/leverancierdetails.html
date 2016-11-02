@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leverancier Details</title>
+</head>
+<body>
+    <div class="col-xs-4">
+        <div class="list-group">
+            <a class="list-group-item active" ng-href="#/detailleverancier/{{leverancierDetailCtrl.leverancier.id}}">Overzicht</a>
+            <a class="list-group-item" href="#/detailleverancier/edit/{{leverancierDetailCtrl.leverancier.id}}">Aanpassen leverancier</a>
+            <a class="list-group-item" href="#">Aanpassen abonnement</a>
+            <a class="list-group-item" href="#">Creatie nieuw abonnement</a>
+        </div>
+    </div>
+    <div class="col-xs-8 panel panel-default">
+        <div class="panel-body">
+            <h3>Overzicht {{leverancierDetailCtrl.leverancier.naam}}</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Naam: {{leverancierDetailCtrl.leverancier.naam}}</li>
+                <li class="list-group-item">Website: <a ng-href="{{leverancierDetailCtrl.leverancier.website}}">{{leverancierDetailCtrl.leverancier.website}}</a></li>
+                <li class="list-group-item">
+                    <h4>Type aanbod leverancier</h4>
+                    <ul ng-repeat="type in leverancierDetailCtrl.leverancier.type">
+                        <li>{{type}}</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <h4>Aanbod leverancier</h4>
+                    <ul ng-repeat="plan in leverancierDetailCtrl.leverancier.tariefplannen">
+                        <li><a ng-href="#">{{plan.naam}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

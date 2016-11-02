@@ -1,0 +1,23 @@
+{
+  "name": "webapp",
+  "authors": [
+    "simonjang <simon.jang.contact@gmail.com>"
+  ],
+  "description": "webapp-projectsIII-mobile",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}

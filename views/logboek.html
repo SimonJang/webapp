@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overzicht Logboek</title>
+</head>
+<body>
+<div class="container" ng-show="logCtrl.error">
+    <b>{{logCtrl.errorMsg}}</b>
+</div>
+<div>
+    <form class="ph-custom-inline">
+        <div class="form-group">
+            <label>Filteren op type transactie</label>
+            <select ng-change="logCtrl.onTypeChange()" ng-model="selectedType">
+                <option ng-repeat="type in logCtrl.types">{{type}}</option>
+            </select>
+        </div>
+        <button ng-click="logCtrl.getAllLogs()" type="button" ng-disabled="true" class="btn btn-default">Zoek alle logs</button>
+        <button ng-click="logCtrl.clearSelection()" type="button" class="btn btn-danger">Reset</button>
+    </form>
+    <div ng-show="logCtrl.logs" class="table-responsive">
+        <h3>Zoekresultaten</h3>
+        <table class="table table-hover">
+            <tr>
+                <th><b>Type</b></th>
+                <th><b>Compensatie in euro</b></th>
+                <th><b>GebruikersID</b></th>
+                <th><b>Link</b></th>
+            </tr>
+            <tr ng-repeat="log in logCtrl.logs | orderBy: 'log.datum'">
+                <td>{{log.type}}</td>
+                <td>{{log.compensatie}}</td>
+                <td>{{log.gebruikersID}}</td>
+                <td>
+                    <a ng-href="#/detailtransactie/{{log.id}}">Details</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

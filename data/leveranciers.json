@@ -1,0 +1,35 @@
+[
+  {"id": 1, "naam":"Elektrabel", "type": ["Elektriciteit","Gas"], "website": "https://www.engie-electrabel.be/nl/particulier/", "tariefplannen": [
+    {
+      "groen": false,
+      "extraVoorwaarden": null,
+      "id": 1,
+      "naam": "Elektrabel Fake Groene stroom",
+      "basisprijs": 121,
+      "abonnementen": null,
+      "tarieven": null
+    }
+  ]},
+  {"id": 2, "naam": "Eni Gas & Power", "type": ["Gas"], "website": "https://www.eni.com/nl_BE/home.html", "tariefplannen": [
+    {
+      "groen": false,
+      "extraVoorwaarden": null,
+      "id": 2,
+      "naam": "Eni Fake Groene stroom",
+      "basisprijs": 121,
+      "abonnementen": null,
+      "tarieven": null
+    }
+  ]},
+  {"id": 3, "naam":"EDF Luminus", "type": ["Elektriciteit"], "website": "https://edfluminus.edf.com/nl/meta-home/edf-luminus", "tariefplannen": [
+    {
+      "groen": false,
+      "extraVoorwaarden": null,
+      "id": 3,
+      "naam": "Luminus Fake Groene stroom",
+      "basisprijs": 121,
+      "abonnementen": null,
+      "tarieven": null
+    }
+  ]}
+]

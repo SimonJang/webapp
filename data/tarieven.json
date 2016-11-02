@@ -1,0 +1,32 @@
+[
+  {
+    "groen": true,
+    "extraVoorwaarden": null,
+    "id": 1,
+    "naam": "Elektrabel Fake Groene stroom",
+    "provider": "Elektrabel",
+    "basisprijs": 121,
+    "abonnementen": null,
+    "tarieven": null
+  },
+  {
+    "groen": false,
+    "extraVoorwaarden": null,
+    "id": 2,
+    "naam": "Eni Fake Groene stroom",
+    "provider": "Eni Gas & Power",
+    "basisprijs": 200,
+    "abonnementen": null,
+    "tarieven": null
+  },
+  {
+    "groen": false,
+    "extraVoorwaarden": null,
+    "id": 3,
+    "naam": "Luminus Fake Groene stroom",
+    "provider": "EDF Luminus",
+    "basisprijs": 300,
+    "abonnementen": null,
+    "tarieven": null
+  }
+]

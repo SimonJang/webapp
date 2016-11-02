@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overzicht van de gebruikers</title>
+</head>
+<body>
+<div>
+    <div class="container" ng-show="gebruikerCtrl.error">
+        <b>{{gebruikerCtrl.errorMsg}}</b>
+    </div>
+    <div>
+        <form class="ph-custom-inline">
+            <div class="form-group">
+                <label for="naamGebruiker">Filteren op e-mailadres gebruiker</label>
+                <input type="text" class="form-control" id="naamGebruiker" placeholder="Email gebruiker" ng-model="search.emailAdres">
+            </div>
+            <button ng-click="gebruikerCtrl.getGebruikers()" type="button" class="btn btn-default">Zoek alle gebruikers</button>
+            <button ng-click="gebruikerCtrl.clearSelection()" type="button" class="btn btn-danger">Reset</button>
+        </form>
+        <div ng-show="gebruikerCtrl.gebruikers" class="table-responsive">
+            <h3>Zoekresultaten</h3>
+            <table class="table table-hover">
+                <tr>
+                    <th><b>Naam</b></th>
+                    <th><b>Voornaam</b></th>
+                    <th><b>Email</b></th>
+                    <th><b>MAC-adres</b></th>
+                    <th><b>Link</b></th>
+                </tr>
+                <tr ng-repeat="geb in gebruikerCtrl.gebruikers | orderBy: 'geb.naam' | filter:search">
+                    <td>{{geb.familienaam}}</td>
+                    <td>{{geb.voornaam}}</td>
+                    <td>{{geb.emailAdres}}</td>
+                    <td>{{geb.macAdres}}</td>
+                    <td>
+                        <a ng-href="#/detailgebruiker/{{geb.id}}">Details</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+</body>
+</html>

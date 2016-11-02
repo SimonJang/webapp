@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aanmaken van een leverancier</title>
+</head>
+<body>
+    <div class="col-xs-4 ph-custom-inline-no-line">
+        <div class="list-group">
+            <a class="list-group-item active" ng-href="#">Overzicht nieuwe leverancier</a>
+            <a class="list-group-item" href="#">Nieuw tariefplan</a>
+        </div>
+    </div>
+    <div class="col-xs-8">
+    <h2 class="ph-custom-inline">Creatie leverancier</h2>
+        <form class="ph-custom-inline-no">
+            <div class="form-group">
+                <label for="naamLeverancier">Naam Leverancier</label>
+                <input type="text" class="form-control" id="naamLeverancier" ng-model="naamLev">
+                <label for="websiteLeverancier">Website Leverancier</label>
+                <input type="text" class="form-control" id="websiteLeverancier" ng-model="websiteLev">
+            </div>
+            <div class="checkbox">
+                <h3>Diensten</h3>
+                <label><input type="checkbox" id="elektriciteit" ng-model="typeE">Elektriciteit</label><br/>
+                <label><input type="checkbox" id="gas" ng-model="typeG">Gas</label>
+            </div>
+            <div>
+                <h3>Abonnementen</h3>
+                <span class="warning-span" ng-hide="leverancierCreateCtrl.temp.tariefplannen"><b>Er zijn nog geen tariefplannen</b></span><br/>
+                <ul ng-show="leverancierCreateCtrl.temp">
+                    <li>no show test</li>
+                </ul>
+                <a ng-click="leverancierCreateCtrl.changeDefault()" class="btn btn-info">Nieuw tariefplan</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
