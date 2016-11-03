@@ -11,7 +11,8 @@
         .controller('leverancierDetailController', leverancierDetailController)
         .controller('gebruikerController', gebruikerController)
         .controller('logController', logController)
-        .controller('levserviceController', levserviceController);
+        .controller('levserviceController', levserviceController)
+        .controller('levserviceCreateController', levserviceCreateController);
 
     function homeController() {
         var vm = this;
@@ -36,6 +37,7 @@
                 })
         };
 
+        // TODO?
         // Wordt momenteel niet gebruikt, inline filtering met Angular in de plaats
 
         vm.getLeverancierByName = function(name) {
@@ -85,7 +87,14 @@
     function leverancierCreateController($scope, leverancierService, $location) {
         var vm = this;
         vm.temp = null;
-        vm.changeDefault = function() {
+        vm.onCreateLevService = function() {
+            var temp = {};
+            temp.naam = $scope.naamLev;
+            temp.website = $scope.websiteLev;
+            temp.types = [];
+            temp.types.push($scope.typeE);
+            temp.types.push($scope.typeG);
+            leverancierService.tempSave(temp);
             $location.path('/createabonnement');
         }
         
@@ -186,6 +195,22 @@
         vm.clearSelection = function() {
             vm.tarieven = null;
         }
+    }
+
+    levserviceCreateController.$inject = ['$scope','$location','tariefService', 'leverancierService'];
+
+    function levserviceCreateController($scope,$location,tariefService, leverancierService) {
+        var vm = this;
+        leverancierService.getLeveranciers()
+            .success(function(leveranciers) {
+                vm.providers = leveranciers;
+            })
+            .error(function(err) {
+                vm.error = err;
+                vm.errorMsg = "Er is iets gout gegaan";
+            })
+        var temp = leverancierService.getTemp();
+        vm.provider = "Elektrabel"
     }
 
 })();

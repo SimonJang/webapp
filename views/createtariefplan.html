@@ -5,6 +5,37 @@
     <title>Aanmaken tariefplan</title>
 </head>
 <body>
-    <h1>TEST</h1>
+<div class="col-xs-4">
+    <div class="list-group">
+        <a class="list-group-item" ng-href="#/createleverancier">Overzicht nieuwe leverancier</a>
+        <button class="list-group-item active" ng-disabled="true">Nieuw tariefplan</button>
+    </div>
+</div>
+<div class="col-xs-8 panel panel-default">
+    <div class="panel-body">
+        <h3 class="ph-custom-inline-no-top-padding">Nieuw tariefplan</h3>
+        <form>
+            <div class="form-group ph-custom-inline-no-top-padding">
+                <label for="naamTarief">Naam tariefplan</label>
+                <input type="text" class="form-control" id="naamTarief" ng-model="naamTarief">
+                <label for="basisPrijsTarief">Basisprijs</label>
+                <input type="number" class="form-control" id="basisPrijsTarief" ng-model="basisPrijs">
+            </div>
+            <div class="checkbox ph-custom-inline-no-top-padding">
+                <label for="isGroen"><input type="checkbox" id="isGroen" ng-model="isGroen">Groene stroom</label>
+            </div>
+            <div class="form-group ph-custom-inline-no-top-padding">
+                <label for="selectedProvider">Leverancier</label>
+                <select class="form-control" id="selectedProvider" ng-model="selectedType">
+                    <option ng-repeat="provider in levserviceCreateCtrl.providers"
+                            ng-attr-selected="levserviceCreateController.provider === provider.naam ? 'selected' : undefined">
+                        {{provider.naam}}
+                    </option>
+                </select>
+            </div>
+            <button ng-click="levserviceCreateController.saveTarief()" class="btn btn-info">Opslaan</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

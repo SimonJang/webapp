@@ -17,6 +17,11 @@ TODO OMVORMEN NAAR SASS of LESS
     border-bottom: 0.5px solid darkgrey;
 }
 
+.ph-custom-inline-no-top-padding {
+    padding-bottom: 1em;
+    border-bottom: 0.5px solid darkgrey;
+}
+
 .ph-custom-inline-no-line {
     padding-top: 4em;
     padding-bottom: 1em;

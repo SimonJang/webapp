@@ -56,8 +56,8 @@
             })
             .when('/createabonnement', {
                 templateUrl: "views/createtariefplan.html",
-                controller: 'tariefplanCreateController',
-                controllerAs: 'tariefplanCreateCtrl'
+                controller: 'levserviceCreateController',
+                controllerAs: 'levserviceCreateCtrl'
             })
     }
 })();

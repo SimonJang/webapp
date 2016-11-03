@@ -34,10 +34,21 @@
         
         service.tempSave = function(tempLev) {
             service.temp = tempLev;
+            var d = new Date();
+            service.temp.createdOn = d.getTime();
+            d = null;
         };
         
         service.getTemp = function() {
-            return service.temp;
+            var d = new Date();
+            var checker = d.getTime();
+            if(checker - (5 * 60 * 1000) > service.temp.createdOn) {
+                service.temp = null;
+                return service.temp;
+            }
+            else {
+                return service.temp;
+            }
         };
 
         return service;
