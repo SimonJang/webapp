@@ -10,6 +10,10 @@
 </div>
 <div>
     <form class="ph-custom-inline">
+        <div class="form-group">
+            <label for="naamLeverancier">Zoeken op leverancier</label>
+            <input type="text" class="form-control" id="naamLeverancier" placeholder="Naam leverancier" ng-model="search.provider">
+        </div>
         <button ng-click="levserviceCtrl.getTarieven()" type="button" class="btn btn-default">Zoek alle tarieven</button>
         <button ng-click="levserviceCtrl.clearSelection()" type="button" class="btn btn-danger">Reset</button>
     </form>
@@ -23,7 +27,7 @@
                 <th><b>Groene stroom</b></th>
                 <th><b>Link</b></th>
             </tr>
-            <tr ng-repeat="tarief in levserviceCtrl.tarieven | orderBy: 'tarief.basisprijs'">
+            <tr ng-repeat="tarief in levserviceCtrl.tarieven | orderBy: 'tarief.basisprijs' |filter:search">
                 <td>{{tarief.naam}}</td>
                 <td>{{tarief.basisprijs}}</td>
                 <td>{{tarief.provider}}</td>

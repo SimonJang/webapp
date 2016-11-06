@@ -24,7 +24,8 @@
         };
 
         service.getLeverancierById = function(id) {
-            // TODO voor REST
+            // TODO voor REST, tijdelijke implementatie met lokale JSON
+
         };
         
         service.saveLeverancier = function(lev) {
@@ -50,6 +51,10 @@
                 return service.temp;
             }
         };
+
+        service.saveTarief = function(tarief) {
+            // TODO
+        }
 
         return service;
     }

@@ -5,6 +5,50 @@
     <title>Aanpassen van een leverancier</title>
 </head>
 <body>
+<div class="col-xs-4">
+    <div class="list-group">
+        <a class="list-group-item" ng-href="#/detailleverancier/{{leverancierDetailCtrl.leverancier.id}}">Overzicht</a>
+        <a class="list-group-item active" href="#/detailleverancier/edit/{{leverancierDetailCtrl.leverancier.id}}">Aanpassen leverancier</a>
+        <a class="list-group-item" href="#/overzichtlevservice/{{leverancierDetailCtrl.leverancier.id}}">Overzicht abonnementen</a>
+        <a class="list-group-item" href="#/createabonnement/{{leverancierDetailCtrl.leverancier.id}}">Creatie nieuw abonnement</a>
+    </div>
+</div>
+<div class="col-xs-8 panel panel-default">
+    <div class="panel-body">
+        <h3 class="ph-custom-inline-no-top-padding">Aanpassen leverancier: {{leverancierDetailCtrl.leverancier.naam}}</h3>
+        <form>
+            <div class="form-group">
+                <label for="naamLeverancier">Naam Leverancier</label>
+                <input type="text" class="form-control" id="naamLeverancier" ng-model="naamLev" ng-value="leverancierDetailCtrl.leverancier.naam">
+                <label for="websiteLeverancier">Website Leverancier</label>
+                <input type="text" class="form-control" id="websiteLeverancier" ng-model="websiteLev" ng-value="leverancierDetailCtrl.leverancier.website">
+            </div>
+            <div class="checkbox">
+                <h4>Diensten</h4>
+                <label><input type="checkbox" id="elektriciteit" ng-model="typeE" ng-checked="leverancierDetailCtrl.leverancier.type.indexOf('Elektriciteit' !== -1)">Elektriciteit</label><br/>
+                <label><input type="checkbox" id="gas" ng-model="typeG" ng-checked="leverancierDetailCtrl.leverancier.type.indexOf('Gas' !== -1)">Gas</label>
+            </div>
+            <div class="ph-custom-inline-no-top-padding">
+                <h4>Abonnementen</h4>
+                <button type="button" ng-click="leverancierDetailCtrl.onCreateLevService()" class="btn btn-info btn-block">Nieuw tariefplan</button>
+                <span class="warning-span" ng-hide="leverancierDetailCtrl.leverancier.tariefplannen"><b>Er zijn nog geen tariefplannen</b></span><br/>
 
+                <table class="table table-condensed" ng-show="leverancierDetailCtrl.leverancier.tariefplannen">
+                    <tr>
+                        <th>Naam Leverancier</th>
+                        <th></th>
+                    </tr>
+                    <tr ng-repeat="tarief in leverancierDetailCtrl.leverancier.tariefplannen">
+                        <td>{{tarief.naam}}</td>
+                        <td><a href="#">Aanpassen</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ph-custom-inline-no-line">
+                <button type="button" ng-click="leverancierDetailCtrl.saveChanges()" class="btn btn-success btn-block">Opslaan</button>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>

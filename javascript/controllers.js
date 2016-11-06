@@ -18,7 +18,11 @@
         var vm = this;
         vm.subTitle = "Overzicht";
     }
-    
+
+    /*
+    Retrieve controller
+     */
+
     leverancierController.$inject = ['$scope','leverancierService'];
 
     function leverancierController($scope,leverancierService) {
@@ -100,16 +104,53 @@
         
     }
 
-    leverancierDetailController.$inject = ['$routeParams', '$scope', 'leverancierService'];
+    /*
+    Create, Update Controller
+     */
 
-    function leverancierDetailController($routeParams,$scope, leverancierService) {
+    leverancierDetailController.$inject = ['$routeParams', '$location', '$scope', 'leverancierService'];
+
+    function leverancierDetailController($routeParams,$location,$scope,leverancierService) {
         var vm = this;
         vm.leverancier = {};
         vm.id = $routeParams.id;
         leverancierService.getLeveranciers()
             .success(function(leveranciers) {
+                vm.leveranciers = leveranciers;
                 vm.leverancier = leveranciers[vm.id-1];
+                $scope.selected = leveranciers[vm.id-1];
             });
+
+
+
+        vm.saveChanges = function() {
+            var lev = {};
+            lev.naam = $scope.naamLev;
+            lev.website = $scope.websiteLev;
+            lev.types = [];
+            if(typeof $scope.typeE !== 'undefined') {
+                lev.types.push("Elektriciteit");
+            }
+            if(typeof $scope.typeG !== 'undefined') {
+                lev.types.push("Gas");
+            }
+            leverancierService.saveLeverancier(lev)
+        };
+        
+        vm.saveTarief = function() {
+            var tarief = {
+                naam: $scope.naamTarief,
+                basisprijs: $scope.basisPrijs,
+                isGroen: $scope.isGroen,
+                provider: $scope.selectedValue
+            };
+            
+            leverancierService.saveTarief(tarief);
+        };
+
+        vm.onCreateLevService = function() {
+            // TODO
+        }
     }
 
     gebruikerController.$inject = ['$scope', 'gebruikerService'];
@@ -176,11 +217,11 @@
         }
     }
 
-    levserviceController.$inject = ['$scope', "$routeParams", "tariefService"];
+    levserviceController.$inject = ['$scope', "$routeParams", "tariefService", "leverancierService"];
 
-    function levserviceController($scope, $routeParams, tariefService) {
+    function levserviceController($scope, $routeParams, tariefService, leverancierService) {
         var vm = this;
-
+        
         vm.getTarieven = function() {
             tariefService.getTarieven()
                 .success(function(tarieven) {
@@ -210,7 +251,9 @@
                 vm.errorMsg = "Er is iets gout gegaan";
             })
         var temp = leverancierService.getTemp();
-        vm.provider = "Elektrabel"
+        vm.provider = temp !== null ? temp.provider : undefined;
+        
+        
     }
 
 })();
