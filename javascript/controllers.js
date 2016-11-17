@@ -10,6 +10,7 @@
         .controller('leverancierCreateController', leverancierCreateController)
         .controller('leverancierDetailController', leverancierDetailController)
         .controller('gebruikerController', gebruikerController)
+        .controller('gebruikerDetailController', gebruikerDetailController)
         .controller('logController', logController)
         .controller('levserviceController', levserviceController)
         .controller('levserviceCreateController', levserviceCreateController)
@@ -164,15 +165,16 @@
         }
     }
 
-    gebruikerController.$inject = ['$scope', 'gebruikerService'];
+    gebruikerController.$inject = ['$routeParams','$scope', 'gebruikerService', 'logService'];
 
-    function gebruikerController($scope, gebruikerService) {
+    function gebruikerController($routeParams,$scope, gebruikerService,logService) {
         var vm = this;
 
         vm.getGebruikers = function() {
             gebruikerService.getGebruikers()
                 .success(function(gebruikers) {
                     vm.gebruikers = gebruikers;
+                    vm.gebruiker = gebruikers[vm.id - 1];
                 })
                 .error(function(err) {
                     vm.error = err;
@@ -183,6 +185,27 @@
         vm.clearSelection = function() {
             vm.gebruikers = null;
         }
+    }
+
+    gebruikerDetailController.$inject = ['$routeParams', 'gebruikerService', 'logService'];
+
+    function gebruikerDetailController($routeParams, gebruikerService, logService) {
+        var vm = this;
+        vm.id = $routeParams.id;
+
+        gebruikerService.getGebruikers()
+            .success(function(gebruikers) {
+                var gebs = gebruikers;
+                vm.gebruiker = gebs[vm.id-1];
+            });
+
+        logService.getAllLogs()
+            .success(function(logs) {
+                var allLogs = logs;
+                vm.logs = allLogs.filter(function(obj) {
+                    return obj.gebruikersID === vm.gebruiker.id;
+                })
+            });
     }
     
     logController.$inject = ['$scope', 'logService'];
@@ -276,6 +299,5 @@
                 vm.tarief = tars[vm.id - 1];
             });
     }
-
 
 })();

@@ -84,6 +84,11 @@
                 controller: 'gebruikerController',
                 controllerAs: 'gebruikerCtrl'
             })
+            .when('/userdetails/:id', {
+                templateUrl: 'views/userdetails.html',
+                controller: 'gebruikerDetailController',
+                controllerAs: 'gebruikerDetailCtrl'
+            })
 
             // CRUD logs
 
@@ -91,6 +96,11 @@
                 templateUrl: 'views/logboek.html',
                 controller: 'logController',
                 controllerAs: 'logCtrl'
+            })
+            .when('/logsuser/:id', {
+                templateUrl: 'views/logboekuser.html',
+                controller: 'gebruikerDetailController',
+                controllerAs: 'gebruikerDetailCtrl'
             });
 
     }

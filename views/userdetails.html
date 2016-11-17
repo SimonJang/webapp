@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details gebruiker</title>
+</head>
+<body>
+<div class="col-xs-4">
+    <div class="list-group">
+        <a class="list-group-item active" ng-href="#/userdetails/{{gebruikerDetailCtrl.id}}">Details gebruiker</a>
+        <a class="list-group-item" href="#/logsuser/{{gebruikerDetailCtrl.id}}">Overzicht transacties</a>
+    </div>
+</div>
+<div class="col-xs-8 panel panel-default">
+    <div class="panel-body">
+        <h3>Overzicht <b>{{gebruikerDetailCtrl.gebruiker.naam}}</b></h3>
+        <ul class="list-group">
+            <li class="list-group-item">Voornaam: {{gebruikerDetailCtrl.gebruiker.voornaam}}</li>
+            <li class="list-group-item">Naam: {{gebruikerDetailCtrl.gebruiker.familienaam}}</li>
+            <li class="list-group-item">email: {{gebruikerDetailCtrl.gebruiker.emailAdres}}</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
