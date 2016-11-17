@@ -80,6 +80,11 @@
 
     function logService($http, GLOBALS) {
         var service = {};
+        service.maanden = ['januari', 'februari', 'maart', 'april','mei','juni','juli','augustus','september','oktober','november','december'];
+        service.counter = [0,0,0,0,0,0,0,0,0,0,0,0];
+        service.types = ['Elektriciteit', 'Gas'];
+        service.typesCounter = [0,0];
+
 
         service.getAllLogs = function() {
             return $http({
@@ -90,6 +95,43 @@
 
         service.getLogById = function(id) {
             // TODO voor REST
+        };
+
+        service.analyseDateYear = function(logs) {
+            var filtered = [];
+            var currentDate = new Date()
+            var currentYear = currentDate.getFullYear()
+            logs.filter(function(log) {
+                var tempDate = new Date(log.datum);
+                if(tempDate.getFullYear() == currentYear) {
+                    filtered.push(log);
+                }
+            });
+            return filtered;
+        };
+
+        service.analyseMonths = function(logs) {
+            var filtered = service.analyseDateYear(logs);
+            var filteredMonths = service.counter;
+            for(var log in filtered) {
+                var tempDate = new Date(filtered[log].datum);
+                filteredMonths[tempDate.getMonth()] = filteredMonths[tempDate.getMonth()] + 1;
+            }
+            return filteredMonths;
+        };
+
+        service.analyseType = function(logs) {
+            var filtered = service.analyseDateYear(logs);
+            var filteredTypes = service.typesCounter;
+            for(var log in filtered) {
+                if(filtered[log].type == 'Elektriciteit') {
+                    filteredTypes[0] += 1;
+                }
+                else if(filtered[log].type == 'Gas') {
+                    filteredTypes[1] += 1;
+                }
+            }
+            return filteredTypes;
         };
 
         return service;

@@ -21,7 +21,7 @@
                 <th>Type</th>
                 <th>Compensatie</th>
             </tr>
-            <tr ng-repeat="log in gebruikerDetailCtrl.logs | orderBy:log.datum">
+            <tr ng-repeat="log in gebruikerDetailCtrl.logs| logFilter:gebruikerDetailCtrl.id | orderBy:log.datum ">
                 <td>{{log.datum | date:'medium'}}</td>
                 <td>{{log.type}}</td>
                 <td>{{log.compensatie}}</td>

@@ -5,7 +5,8 @@
 
 (function() {
     angular.module('beheerApp')
-        .filter('typeFilter', typeFilter);
+        .filter('typeFilter', typeFilter)
+        .filter('logFilter', logFilter);
 
     function typeFilter() {
         return function(levs, typeE, typeG) {
@@ -39,5 +40,18 @@
             return filtered;
         }
     }
+
+    function logFilter() {
+        return function(logs, id) {
+            var filtered = [];
+
+            angular.forEach(logs, function(log) {
+                if(log.gebruikersID == id) {
+                    filtered.push(log)
+                }
+            });
+            return filtered;
+        };
+    };
 
 })();

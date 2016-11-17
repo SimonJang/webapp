@@ -202,9 +202,7 @@
         logService.getAllLogs()
             .success(function(logs) {
                 var allLogs = logs;
-                vm.logs = allLogs.filter(function(obj) {
-                    return obj.gebruikersID === vm.gebruiker.id;
-                })
+                vm.logs = allLogs;
             });
     }
     
@@ -227,21 +225,34 @@
 
         vm.onTypeChange = function() {
             vm.logs = null;
+            $scope.labels = null;
+            $scope.data = null;
+            $scope.isType = false;
             var currentSelected = $scope.selectedType;
             logService.getAllLogs()
                 .success(function(logs) {
                     if(currentSelected !== null && currentSelected === "Elektriciteit") {
                         vm.logs = logs.filter(function(obj) {
                             return obj.type === currentSelected;
-                        })
+                        });
+                        $scope.labels = logService.maanden;
+                        $scope.data = logService.analyseMonths(vm.logs);
+                        $scope.isType = false;
+
                     }
                     else if(currentSelected !== null && currentSelected === "Gas") {
                         vm.logs = logs.filter(function(obj) {
                             return obj.type === currentSelected;
                         })
+                        $scope.labels = logService.maanden;
+                        $scope.data = logService.analyseMonths(vm.logs)
+                        $scope.isType = false;
                     }
                     else {
                         vm.logs = logs;
+                        $scope.labels = logService.types;
+                        $scope.data = logService.analyseType(vm.logs)
+                        $scope.isType = true;
                     }
                 })
         };
@@ -250,6 +261,8 @@
             vm.logs = null;
         }
     }
+    
+    
 
     levserviceController.$inject = ['$scope', "$routeParams", "tariefService", "leverancierService"];
 

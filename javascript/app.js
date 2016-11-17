@@ -4,7 +4,7 @@
  */
 
 (function() {
-    angular.module("beheerApp",['ngRoute']).config(moduleConfig);
+    angular.module("beheerApp",['ngRoute', 'chart.js']).config(moduleConfig);
     
     moduleConfig.$inject = ['$routeProvider'];
     

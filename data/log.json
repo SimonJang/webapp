@@ -30,5 +30,53 @@
     "compensatie": 10,
     "datum": "2016-10-20T18:25:43.511Z",
     "details": [{"exLevID": 2, "newLevID": 3, "plan": 1 }]
+  },
+  {
+    "id": 5,
+    "type": "Gas",
+    "gebruikersID": 2,
+    "compensatie": 10,
+    "datum": "2016-01-23T18:25:43.511Z",
+    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+  },
+  {
+    "id": 6,
+    "type": "Elektriciteit",
+    "gebruikersID": 2,
+    "compensatie": 10,
+    "datum": "2016-09-23T18:25:43.511Z",
+    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+  },
+  {
+    "id": 7,
+    "type": "Gas",
+    "gebruikersID": 2,
+    "compensatie": 10,
+    "datum": "2016-07-23T18:25:43.511Z",
+    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+  },
+  {
+    "id": 8,
+    "type": "Elektriciteit",
+    "gebruikersID": 2,
+    "compensatie": 10,
+    "datum": "2016-08-23T18:25:43.511Z",
+    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+  },
+  {
+    "id": 9,
+    "type": "Elektriciteit",
+    "gebruikersID": 2,
+    "compensatie": 10,
+    "datum": "2016-04-23T18:25:43.511Z",
+    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+  },
+  {
+    "id": 10,
+    "type": "Elektriciteit",
+    "gebruikersID": 2,
+    "compensatie": 10,
+    "datum": "2016-04-23T18:25:43.511Z",
+    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
   }
 ]
