@@ -4,9 +4,7 @@
     <list default="true" id="e3f97f8f-7023-41b4-8368-cb26fc5b8a9f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript/controllers.js" afterPath="$PROJECT_DIR$/javascript/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript/filters.js" afterPath="$PROJECT_DIR$/javascript/filters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/logboek.html" afterPath="$PROJECT_DIR$/views/logboek.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/logboekuser.html" afterPath="$PROJECT_DIR$/views/logboekuser.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript/services.js" afterPath="$PROJECT_DIR$/javascript/services.js" />
     </list>
     <ignored path="webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,21 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+            <state relative-caret-position="300">
+              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="252" column="26" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
+            <state relative-caret-position="225">
+              <caret line="218" column="30" selection-start-line="218" selection-start-column="30" selection-end-line="218" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -60,8 +58,8 @@
       <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="97" column="10" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
+            <state relative-caret-position="470">
+              <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -152,11 +150,11 @@
         <option value="$PROJECT_DIR$/data/log.json" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/bower_components/chart.js/.gitignore" />
-        <option value="$PROJECT_DIR$/javascript/services.js" />
         <option value="$PROJECT_DIR$/javascript/filters.js" />
         <option value="$PROJECT_DIR$/views/logboekuser.html" />
         <option value="$PROJECT_DIR$/views/logboek.html" />
         <option value="$PROJECT_DIR$/javascript/controllers.js" />
+        <option value="$PROJECT_DIR$/javascript/services.js" />
       </list>
     </option>
   </component>
@@ -342,7 +340,7 @@
       <workItem from="1479281643669" duration="2000" />
       <workItem from="1479365647456" duration="21520000" />
       <workItem from="1479392154834" duration="589000" />
-      <workItem from="1479392839735" duration="3307000" />
+      <workItem from="1479392839735" duration="3819000" />
     </task>
     <task id="LOCAL-00001" summary="Updating tarief CRUD">
       <created>1478159013594</created>
@@ -400,11 +398,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479395521477</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="sorting dates">
+      <created>1479396418438</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1479396418438</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89600000" />
+    <option name="totallyTimeSpent" value="90112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -450,7 +455,8 @@
     <MESSAGE value="Navigatie logdetail afwerken" />
     <MESSAGE value="hotfix routing" />
     <MESSAGE value="hotfix chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="hotfix chart" />
+    <MESSAGE value="sorting dates" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorting dates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -774,14 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="97" column="10" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/logboekuser.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -806,18 +804,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/javascript/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        <state relative-caret-position="225">
+          <caret line="218" column="30" selection-start-line="218" selection-start-column="30" selection-end-line="218" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/controllers.js">
+    <entry file="file://$PROJECT_DIR$/javascript/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="252" column="26" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
+        <state relative-caret-position="470">
+          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding />
         </state>
       </provider>

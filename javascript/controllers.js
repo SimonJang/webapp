@@ -214,6 +214,9 @@
     function logController($scope, logService) {
         var vm = this;
         vm.types = ["Alle","Elektriciteit", "Gas"];
+        $scope.labels = null;
+        $scope.data = null;
+        $scope.isType = false;
 
         vm.onTypeChange = function() {
             vm.logs = null;

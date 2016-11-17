@@ -81,9 +81,7 @@
     function logService($http, GLOBALS) {
         var service = {};
         service.maanden = ['januari', 'februari', 'maart', 'april','mei','juni','juli','augustus','september','oktober','november','december'];
-        service.counter = [0,0,0,0,0,0,0,0,0,0,0,0];
         service.types = ['Elektriciteit', 'Gas'];
-        service.typesCounter = [0,0];
 
 
         service.getAllLogs = function() {
@@ -112,7 +110,8 @@
 
         service.analyseMonths = function(logs) {
             var filtered = service.analyseDateYear(logs);
-            var filteredMonths = service.counter;
+            var filteredMonths = null;
+            filteredMonths = [0,0,0,0,0,0,0,0,0,0,0,0];
             for(var log in filtered) {
                 var tempDate = new Date(filtered[log].datum);
                 filteredMonths[tempDate.getMonth()] = filteredMonths[tempDate.getMonth()] + 1;
@@ -122,7 +121,8 @@
 
         service.analyseType = function(logs) {
             var filtered = service.analyseDateYear(logs);
-            var filteredTypes = service.typesCounter;
+            var filteredTypes = null;
+            filteredTypes = [0,0];
             for(var log in filtered) {
                 if(filtered[log].type == 'Elektriciteit') {
                     filteredTypes[0] += 1;
