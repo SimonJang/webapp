@@ -1,156 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3f97f8f-7023-41b4-8368-cb26fc5b8a9f" name="Default" comment="hotfix routing">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.codeclimate.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.eslintignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.eslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.github/ISSUE_TEMPLATE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.github/PULL_REQUEST_TEMPLATE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/MAINTAINING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/config.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/00-Getting-Started.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/01-Chart-Configuration.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/02-Scales.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/03-Line-Chart.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/04-Bar-Chart.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/05-Radar-Chart.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/06-Polar-Area-Chart.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/07-Pie-Doughnut-Chart.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/08-Bubble-Chart.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/09-Advanced.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/docs/10-Notes.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/karma.conf.ci.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/karma.coverage.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/animation/progress-bar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/bar/bar-horizontal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/bar/bar-multi-axis.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/bar/bar-stacked.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/bar/bar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/bubble.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/combo-bar-line.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/data_labelling.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/doughnut.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/legend/pointstyle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/legend/positions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/line/different-point-sizes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/line/interpolation-modes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/line/line-multi-axis.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/line/line-skip-points.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/line/line-stacked-area.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/line/line-stepped.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/line/line-styles.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/line/line.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/line/point-styles.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/pie.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/polar-area.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/radar/radar-skip-points.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/radar/radar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/display-settings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/filtering-labels.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/gridlines.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/line-non-numeric-y.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/linear/min-max-settings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/linear/step-size.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/linear/suggested-min-max-settings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/logarithmic/line-logarithmic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/logarithmic/scatter-logX.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/multiline-labels.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/time/combo-time-scale.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/time/line-time-point-data.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scales/time/line-time-scale.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scatter/scatter-multi-axis.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/scatter/scatter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/tooltips/dataPoints-customTooltips.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/tooltips/interaction-modes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/tooltips/line-customTooltips.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/tooltips/pie-customTooltips.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/tooltips/position-modes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/tooltips/tooltip-callbacks.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/samples/utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/scripts/release.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/charts/Chart.Bar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/charts/Chart.Bubble.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/charts/Chart.Doughnut.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/charts/Chart.Line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/charts/Chart.PolarArea.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/charts/Chart.Radar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/charts/Chart.Scatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/controllers/controller.bar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/controllers/controller.bubble.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/controllers/controller.doughnut.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/controllers/controller.line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/controllers/controller.polarArea.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/controllers/controller.radar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.animation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.canvasHelpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.controller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.datasetController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.element.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.helpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.interaction.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.layoutService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.legend.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.plugin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.scale.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.scaleService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.ticks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.title.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/core/core.tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/elements/element.arc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/elements/element.line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/elements/element.point.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/elements/element.rectangle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/scales/scale.category.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/scales/scale.linear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/scales/scale.linearbase.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/scales/scale.logarithmic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/scales/scale.radialLinear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/src/scales/scale.time.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/controller.bar.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/controller.bubble.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/controller.doughnut.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/controller.line.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/controller.polarArea.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/controller.radar.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.controller.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.datasetController.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.element.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.helpers.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.interaction.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.layoutService.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.legend.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.plugin.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.scaleService.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.title.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/core.tooltip.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/defaultConfig.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/element.arc.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/element.line.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/element.point.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/element.rectangle.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/mockContext.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/scale.category.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/scale.linear.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/scale.logarithmic.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/scale.radialLinear.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/test/scale.time.tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/chart.js/thankyou.md" />
+    <list default="true" id="e3f97f8f-7023-41b4-8368-cb26fc5b8a9f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript/controllers.js" afterPath="$PROJECT_DIR$/javascript/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript/filters.js" afterPath="$PROJECT_DIR$/javascript/filters.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/logboek.html" afterPath="$PROJECT_DIR$/views/logboek.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/logboekuser.html" afterPath="$PROJECT_DIR$/views/logboekuser.html" />
     </list>
     <ignored path="webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -181,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
@@ -191,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="750">
+              <caret line="252" column="26" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -204,8 +60,18 @@
       <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+            <state relative-caret-position="320">
+              <caret line="97" column="10" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filters.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/filters.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -225,7 +91,17 @@
         <entry file="file://$PROJECT_DIR$/views/logboekuser.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="23" column="113" selection-start-line="23" selection-start-column="113" selection-end-line="23" selection-end-column="113" />
+              <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logboek.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/logboek.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -270,17 +146,17 @@
         <option value="$PROJECT_DIR$/views/leverancierdetails.html" />
         <option value="$PROJECT_DIR$/views/userdetails.html" />
         <option value="$PROJECT_DIR$/views/useroverview.html" />
-        <option value="$PROJECT_DIR$/javascript/filters.js" />
-        <option value="$PROJECT_DIR$/javascript/services.js" />
         <option value="$PROJECT_DIR$/stylesheets/main.css" />
         <option value="$PROJECT_DIR$/javascript/app.js" />
         <option value="$PROJECT_DIR$/views/logdetails.html" />
         <option value="$PROJECT_DIR$/data/log.json" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/bower_components/chart.js/.gitignore" />
+        <option value="$PROJECT_DIR$/javascript/services.js" />
+        <option value="$PROJECT_DIR$/javascript/filters.js" />
+        <option value="$PROJECT_DIR$/views/logboekuser.html" />
         <option value="$PROJECT_DIR$/views/logboek.html" />
         <option value="$PROJECT_DIR$/javascript/controllers.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/views/logboekuser.html" />
-        <option value="$PROJECT_DIR$/bower_components/chart.js/.gitignore" />
       </list>
     </option>
   </component>
@@ -336,6 +212,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -452,7 +342,7 @@
       <workItem from="1479281643669" duration="2000" />
       <workItem from="1479365647456" duration="21520000" />
       <workItem from="1479392154834" duration="589000" />
-      <workItem from="1479392839735" duration="2434000" />
+      <workItem from="1479392839735" duration="3307000" />
     </task>
     <task id="LOCAL-00001" summary="Updating tarief CRUD">
       <created>1478159013594</created>
@@ -503,11 +393,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479394915587</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="hotfix chart">
+      <created>1479395521477</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1479395521477</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88727000" />
+    <option name="totallyTimeSpent" value="89600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -552,7 +449,8 @@
     <MESSAGE value="Navigatie Log afwerken + grafiek" />
     <MESSAGE value="Navigatie logdetail afwerken" />
     <MESSAGE value="hotfix routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="hotfix routing" />
+    <MESSAGE value="hotfix chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="hotfix chart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -765,13 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/filters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -783,14 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/logboek.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -875,34 +758,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/logboekuser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="113" selection-start-line="23" selection-start-column="113" selection-end-line="23" selection-end-column="113" />
           <folding />
         </state>
       </provider>
@@ -915,10 +774,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="97" column="10" selection-start-line="97" selection-start-column="10" selection-end-line="97" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/logboekuser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/logboek.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="252" column="26" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
           <folding />
         </state>
       </provider>

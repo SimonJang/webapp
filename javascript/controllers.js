@@ -205,6 +205,8 @@
                 var allLogs = logs;
                 vm.logs = allLogs;
             });
+        
+        
     }
     
     logController.$inject = ['$scope', 'logService'];
@@ -212,17 +214,6 @@
     function logController($scope, logService) {
         var vm = this;
         vm.types = ["Alle","Elektriciteit", "Gas"];
-
-        vm.getAllLogs = function() {
-            logService.getAllLogs()
-                .success(function(logs) {
-                    vm.logs = logs;
-                })
-                .error(function(err){
-                    vm.error = err;
-                    vm.errorMsg = "Er is iets foutgegaan";
-                });
-        };
 
         vm.onTypeChange = function() {
             vm.logs = null;
@@ -236,6 +227,9 @@
                         vm.logs = logs.filter(function(obj) {
                             return obj.type === currentSelected;
                         });
+                        vm.logs.sort(function(a,b) {
+                            return new Date(b.datum) - new Date(a.datum);
+                        });
                         $scope.labels = logService.maanden;
                         $scope.data = logService.analyseMonths(vm.logs);
                         $scope.isType = false;
@@ -245,12 +239,18 @@
                         vm.logs = logs.filter(function(obj) {
                             return obj.type === currentSelected;
                         })
+                        vm.logs.sort(function(a,b) {
+                            return new Date(b.datum) - new Date(a.datum);
+                        })
                         $scope.labels = logService.maanden;
                         $scope.data = logService.analyseMonths(vm.logs)
                         $scope.isType = false;
                     }
                     else {
                         vm.logs = logs;
+                        vm.logs.sort(function(a,b) {
+                            return new Date(b.datum) - new Date(a.datum);
+                        })
                         $scope.labels = logService.types;
                         $scope.data = logService.analyseType(vm.logs)
                         $scope.isType = true;

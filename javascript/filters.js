@@ -50,6 +50,9 @@
                     filtered.push(log)
                 }
             });
+            filtered.sort(function(a,b) {
+                return new Date(b.datum) - new Date(a.datum);
+            })
             return filtered;
         };
     };
