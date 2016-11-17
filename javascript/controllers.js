@@ -12,6 +12,7 @@
         .controller('gebruikerController', gebruikerController)
         .controller('gebruikerDetailController', gebruikerDetailController)
         .controller('logController', logController)
+        .controller('logDetailController', logDetailController)
         .controller('levserviceController', levserviceController)
         .controller('levserviceCreateController', levserviceCreateController)
         .controller('levserviceEditController', levserviceEditController);
@@ -261,7 +262,43 @@
             vm.logs = null;
         }
     }
-    
+
+    logDetailController.$inject = ['$routeParams','$scope', 'logService', 'gebruikerService', 'leverancierService','tariefService'];
+
+
+    function logDetailController($routeParams,$scope,logService, gebruikerService, leverancierService,tariefService) {
+        var vm = this;
+        vm.id = $routeParams.id;
+
+        logService.getAllLogs()
+            .success(function(logs) {
+                var temp = logs;
+                vm.log = temp[vm.id - 1];
+                vm.details = vm.log.details;
+            });
+
+        gebruikerService.getGebruikers()
+            .success(function(gebs) {
+                var temp = gebs;
+                vm.naam = temp[vm.log.gebruikersID - 1].emailAdres;
+            });
+
+        leverancierService.getLeveranciers()
+            .success(function(levs) {
+                var temp = levs;
+                var tempIDNew = vm.details.newLevID;
+                var tempIDOld = vm.details.exLevID
+                vm.naamLevO = temp[tempIDOld - 1].naam;
+                vm.naamLevN = temp[tempIDNew - 1].naam;
+            })
+
+        tariefService.getTarieven()
+            .success(function(tars) {
+                var temp = tars;
+                vm.tariefNaam = temp[vm.details.plan -1].naam
+            })
+
+    }
     
 
     levserviceController.$inject = ['$scope', "$routeParams", "tariefService", "leverancierService"];

@@ -20,26 +20,26 @@
         <button ng-click="logCtrl.clearSelection()" type="button" class="btn btn-danger">Reset</button>-->
     </form>
     <div ng-show="logCtrl.logs" class="table-responsive">
-        <div class="col-xs-6">
+        <div class="col-xs-6 ">
             <h3>Zoekresultaten</h3>
             <table class="table table-hover">
                 <tr>
                     <th><b>Type</b></th>
                     <th><b>Compensatie in euro</b></th>
-                    <th><b>GebruikersID</b></th>
+                    <th><b>Datum</b></th>
                     <th><b>Link</b></th>
                 </tr>
                 <tr ng-repeat="log in logCtrl.logs | orderBy: 'log.datum'">
                     <td>{{log.type}}</td>
                     <td>{{log.compensatie}}</td>
-                    <td>{{log.gebruikersID}}</td>
+                    <td>{{log.datum | date:'medium'}}</td>
                     <td>
                         <a ng-href="#/detailtransactie/{{log.id}}">Details</a>
                     </td>
                 </tr>
             </table>
         </div>
-        <div ng-show="logCtrl.logs" class="col-xs-5 col-xs-offset-1" id="graphArea">
+        <div ng-show="logCtrl.logs" class="col-xs-5 col-xs-offset-1 graph" id="graphArea">
             <h3 ng-show="isType">Type transactie</h3>
             <h3 ng-hide="isType">Periode transacties</h3>
             <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">

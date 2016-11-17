@@ -45,5 +45,5 @@ TODO OMVORMEN NAAR SASS of LESS
 }
 
 .graph {
-    margin-top: 3em;
+    border-left: 1px solid darkgrey;
 }

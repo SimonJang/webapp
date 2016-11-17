@@ -5,7 +5,7 @@
     "gebruikersID": 2,
     "compensatie": 10,
     "datum": "2016-10-23T18:25:43.511Z",
-    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+    "details": {"exLevID": 1, "newLevID": 2, "plan": 1 }
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "gebruikersID": 3,
     "compensatie": 10,
     "datum": "2016-10-22T18:25:43.511Z",
-    "details": [{"exLevID": 3, "newLevID": 1, "plan": 1 }]
+    "details": {"exLevID": 3, "newLevID": 1, "plan": 1 }
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "gebruikersID": 4,
     "compensatie": 10,
     "datum": "2016-10-21T18:25:43.511Z",
-    "details": [{"exLevID": 1, "newLevID": 3, "plan": 1 }]
+    "details": {"exLevID": 1, "newLevID": 3, "plan": 1 }
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "gebruikersID": 1,
     "compensatie": 10,
     "datum": "2016-10-20T18:25:43.511Z",
-    "details": [{"exLevID": 2, "newLevID": 3, "plan": 1 }]
+    "details": {"exLevID": 2, "newLevID": 3, "plan": 1 }
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "gebruikersID": 2,
     "compensatie": 10,
     "datum": "2016-01-23T18:25:43.511Z",
-    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+    "details": {"exLevID": 1, "newLevID": 2, "plan": 1 }
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "gebruikersID": 2,
     "compensatie": 10,
     "datum": "2016-09-23T18:25:43.511Z",
-    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+    "details": {"exLevID": 1, "newLevID": 2, "plan": 1 }
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "gebruikersID": 2,
     "compensatie": 10,
     "datum": "2016-07-23T18:25:43.511Z",
-    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+    "details": {"exLevID": 1, "newLevID": 2, "plan": 1 }
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "gebruikersID": 2,
     "compensatie": 10,
     "datum": "2016-08-23T18:25:43.511Z",
-    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+    "details": {"exLevID": 1, "newLevID": 2, "plan": 1 }
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "gebruikersID": 2,
     "compensatie": 10,
     "datum": "2016-04-23T18:25:43.511Z",
-    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+    "details": {"exLevID": 1, "newLevID": 2, "plan": 1 }
   },
   {
     "id": 10,
@@ -77,6 +77,6 @@
     "gebruikersID": 2,
     "compensatie": 10,
     "datum": "2016-04-23T18:25:43.511Z",
-    "details": [{"exLevID": 1, "newLevID": 2, "plan": 1 }]
+    "details": {"exLevID": 1, "newLevID": 2, "plan": 1 }
   }
 ]
