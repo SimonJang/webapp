@@ -290,7 +290,7 @@
                 var tempIDOld = vm.details.exLevID
                 vm.naamLevO = temp[tempIDOld - 1].naam;
                 vm.naamLevN = temp[tempIDNew - 1].naam;
-            })
+            });
 
         tariefService.getTarieven()
             .success(function(tars) {
