@@ -27,8 +27,8 @@
                 </li>
                 <li class="list-group-item">
                     <h4>Aanbod leverancier</h4>
-                    <ul ng-repeat="plan in leverancierDetailCtrl.leverancier.tariefplannen">
-                        <li><a ng-href="#">{{plan.naam}}</a></li>
+                    <ul ng-repeat="plan in leverancierDetailCtrl.tarieven">
+                        <li><a ng-href="#/detaillevservice/{{plan.id}}">{{plan.naam}}</a></li>
                     </ul>
                 </li>
             </ul>

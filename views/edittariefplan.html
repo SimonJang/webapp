@@ -5,6 +5,27 @@
     <title>Aanpassen van een tariefplan</title>
 </head>
 <body>
-
+<div class="col-xs-4">
+    <div class="list-group">
+        <a class="list-group-item active" ng-href="#">Aanpassen tariefplan</a>
+    </div>
+</div>
+<div class="col-xs-8 panel panel-default">
+    <div class="panel-body">
+        <h3 class="ph-custom-inline-no-top-padding">Aanpassen tariefplan</h3>
+        <form>
+            <div class="form-group ph-custom-inline-no-top-padding">
+                <label for="naamTarief">Naam tariefplan</label>
+                <input type="text" class="form-control" id="naamTarief" ng-model="naamTarief" ng-value="levserviceEditCtrl.tarief.naam">
+                <label for="basisPrijsTarief">Basisprijs</label>
+                <input type="number" class="form-control" id="basisPrijsTarief" ng-model="basisPrijs" ng-value="levserviceEditCtrl.tarief.basisprijs">
+            </div>
+            <div class="checkbox ph-custom-inline-no-top-padding">
+                <label for="isGroen"><input type="checkbox" id="isGroen" ng-model="isGroen" ng-checked="levserviceEditCtrl.tarief.groen === true">Groene stroom</label>
+            </div>
+            <button ng-click="levserviceCreateController.saveTarief()" class="btn btn-info">Wijzigingen opslaan</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

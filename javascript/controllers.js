@@ -12,7 +12,8 @@
         .controller('gebruikerController', gebruikerController)
         .controller('logController', logController)
         .controller('levserviceController', levserviceController)
-        .controller('levserviceCreateController', levserviceCreateController);
+        .controller('levserviceCreateController', levserviceCreateController)
+        .controller('levserviceEditController', levserviceEditController);
 
     function homeController() {
         var vm = this;
@@ -108,9 +109,9 @@
     Create, Update Controller
      */
 
-    leverancierDetailController.$inject = ['$routeParams', '$location', '$scope', 'leverancierService'];
+    leverancierDetailController.$inject = ['$routeParams', '$location', '$scope', 'leverancierService', 'tariefService'];
 
-    function leverancierDetailController($routeParams,$location,$scope,leverancierService) {
+    function leverancierDetailController($routeParams,$location,$scope,leverancierService, tariefService) {
         var vm = this;
         vm.leverancier = {};
         vm.id = $routeParams.id;
@@ -118,9 +119,19 @@
             .success(function(leveranciers) {
                 vm.leveranciers = leveranciers;
                 vm.leverancier = leveranciers[vm.id-1];
-                $scope.selected = leveranciers[vm.id-1];
             });
 
+        tariefService.getTarieven()
+            .success(function(tarieven) {
+                var tars = tarieven;
+                vm.tarieven = tars.filter(function(obj) {
+                    return obj.provider == vm.leverancier.naam;
+                });
+            })
+            .error(function(err) {
+                vm.error = err;
+                vm.errorMsg = "Something went wrong";
+            });
 
 
         vm.saveChanges = function() {
@@ -149,7 +160,7 @@
         };
 
         vm.onCreateLevService = function() {
-            // TODO
+            $location.path('/createabonnement/' + vm.id);
         }
     }
 
@@ -249,11 +260,22 @@
             .error(function(err) {
                 vm.error = err;
                 vm.errorMsg = "Er is iets gout gegaan";
-            })
+            });
         var temp = leverancierService.getTemp();
         vm.provider = temp !== null ? temp.provider : undefined;
-        
-        
     }
+
+    levserviceEditController.$inject = ['$routeParams','$scope', '$location', 'tariefService'];
+
+    function levserviceEditController($routeParams,$scope, $location, tariefService) {
+        var vm = this;
+        vm.id = $routeParams.id;
+        tariefService.getTarieven()
+            .success(function(tarieven) {
+                var tars = tarieven;
+                vm.tarief = tars[vm.id - 1];
+            });
+    }
+
 
 })();

@@ -26,18 +26,6 @@
                 <div class="checkbox ph-custom-inline-no-top-padding">
                     <label for="isGroen"><input type="checkbox" id="isGroen" ng-model="isGroen">Groene stroom</label>
                 </div>
-                <div class="form-group ph-custom-inline-no-top-padding">
-                    <label for="selectedProvider">Leverancier</label>
-                    <select class="form-control" id="selectedProvider" ng-model="selectedType"
-                            ng-options="leverancier.naam for leverancier in leverancierDetailCtrl.leveranciers"
-                            ng-model="selected">
-                        <!-- <option ng-repeat="leverancier in leverancierDetailCtrl.leveranciers"
-                                ng-selected="leverancier.naam == leverancierDetailCtrl.leverancier.naam">
-                            {{leverancier.naam}}
-                        </option> -->
-                        <option value="" ng-if="selectedProvider === leverancier.naam"></option>
-                    </select>
-                </div>
                 <button ng-click="leverancierDetailCtrl.saveTarief()" class="btn btn-info">Opslaan</button>
             </form>
         </div>
