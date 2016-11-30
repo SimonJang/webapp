@@ -5,6 +5,7 @@
 
 (function() {
     angular.module('beheerApp')
+        .controller('loginController', loginController)
         .controller('homeController', homeController)
         .controller('leverancierController', leverancierController)
         .controller('leverancierCreateController', leverancierCreateController)
@@ -15,11 +16,78 @@
         .controller('logDetailController', logDetailController)
         .controller('levserviceController', levserviceController)
         .controller('levserviceCreateController', levserviceCreateController)
+        .controller('aanvraagController', aanvraagController)
         .controller('levserviceEditController', levserviceEditController);
 
-    function homeController() {
+    homeController.$inject = ['$location', 'loginService'];
+
+    function homeController($location, loginService) {
+        /*
         var vm = this;
+        vm.flag = false;
+
+        if(loginService.isAuth()) {
+            vm.flag = true;
+        }
+
         vm.subTitle = "Overzicht";
+        vm.logIn = function() {
+            $location.path('/login')
+        }
+        */
+    }
+
+    /*
+    Login methode signatuur veranderen want is nu enkel voor te testen
+
+     */
+    
+    loginController.$inject = ['$window','loginService','$scope', '$location'];
+
+    function loginController($window,loginService, $scope, $location) {
+        var vm = this;
+        vm.credentials = null;
+
+        vm.flag = undefined;
+
+        if(loginService.isAuth()) {
+            vm.flag = true;
+        }
+        else {
+            vm.flag = false;
+        }
+
+        vm.subTitle = "Overzicht";
+        vm.gotologIn = function() {
+            $location.path('/login')
+        };
+
+        vm.logIn = function() {
+            vm.credentials = $scope.userName + $scope.pw;
+            loginService.getPK()
+                .success(function(data) {
+                    var result = data[0].rsa;
+                    var pk = cryptico.generateRSAKey(vm.credentials, 1024);
+                    var pkString = cryptico.publicKeyString(pk);
+
+                    var finalResult = cryptico.decrypt(result,pk);
+
+                    if(finalResult.plaintext == 'ok') {
+                        sessionStorage.setItem(['login'], pkString)
+
+                    }
+                });
+            if(loginService.isAuth()) {
+                $window.location.reload();
+                $location.path('/home');
+                vm.flag=true;
+            }
+        };
+        vm.logOff = function() {
+            sessionStorage.removeItem('login');
+            $window.location.reload();
+            $location.path('/');
+        }
     }
 
     /*
@@ -351,6 +419,12 @@
                 var tars = tarieven;
                 vm.tarief = tars[vm.id - 1];
             });
+    }
+
+    aanvraagController.$inject = ['$scope', '$location'];
+
+    function aanvraagController() {
+
     }
 
 })();

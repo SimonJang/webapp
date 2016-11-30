@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <div class="col-xs-8 panel panel-default">
+        <div class="panel-body">
+            <h3 class="ph-custom-inline-no-top-padding">Login</h3>
+            <div class="form-group">
+                <label for="login">Gebruikersnaam</label>
+                <input ng-model="userName" type="text" class="form-control" id="login" placeholder="Geef uw gebruikersnaam">
+            </div>
+            <div class="form-group">
+                <label for="pw">Paswoord</label>
+                <input ng-model="pw" type="password" class="form-control" id="pw">
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="loginCtrl.logIn()">Inloggen</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

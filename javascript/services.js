@@ -6,10 +6,32 @@
 (function() {
     'use strict';
     angular.module('beheerApp')
+        .service('loginService', loginService)
         .service('leverancierService', leverancierService)
         .service('gebruikerService', gebruikerService)
         .service('logService', logService)
         .service('tariefService', tariefService);
+
+    loginService.$inject = ['$http', 'GLOBALS'];
+
+    function loginService($http, GLOBALS) {
+        var service = {};
+        service.getPK = function() {
+            return $http({
+                method: 'GET',
+                url: GLOBALS.userUrl
+            })
+        };
+        service.isAuth = function() {
+            if(sessionStorage.getItem('login') == "z2TM1T80mY4HzMQf5TLmWkRlxL3yRXaRNTrMQ7ky2rrKtM+Gh48s6PGBE71x042LhGoyzXMx3UiHzdTaAjgVOI3GX6+0EbEv6MAj+VVoJkGQr0JTJyGmByPLhl2vkfFRmklpnHUKzS2Jc7/QMo5Ym3QHVaptryPxsqildy9ieNc=") {
+                return true;
+            }
+            else {
+                return false;
+            }
+        };
+        return service;
+    }
 
     leverancierService.$inject = ['$http','GLOBALS'];
 

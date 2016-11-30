@@ -6,7 +6,7 @@
     "emailAdres": "iljademits@metingapp.com",
     "macAdres": "aa:aa:aa:bb:bb::bb",
     "meters": null,
-    "abonnementen": null
+    "abonnementen": {"levId": 1, "planId": 1}
   },
   {
     "id": 2,

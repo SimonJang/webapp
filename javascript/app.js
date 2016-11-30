@@ -4,21 +4,37 @@
  */
 
 (function() {
-    angular.module("beheerApp",['ngRoute', 'chart.js']).config(moduleConfig);
+    angular.module("beheerApp",['ngRoute', 'chart.js'])
+        .config(moduleConfig);
     
     moduleConfig.$inject = ['$routeProvider'];
     
     function moduleConfig($routeProvider) {
         $routeProvider.when('/', {
-            templateUrl: 'views/home.html',
-            controller: 'homeController',
-            controllerAs: 'homeCtrl'
+            templateUrl: 'views/auth/login.html',
+            controller: 'loginController',
+            controllerAs: 'loginCtrl'
         })
             // Home
             .when('/home', {
                 templateUrl: 'views/home.html',
-                controller: 'homeController',
-                controllerAs: 'homeCtrl'
+                controller: 'loginController',
+                controllerAs: 'loginCtrl'
+            })
+                
+            // Login
+                
+            .when('/login', {
+                templateUrl: 'views/auth/login.html',
+                controller: 'loginController',
+                controllerAs: 'loginCtrl'
+            })
+                
+                
+            .when('/aanvraag', {
+                temlateUrl: 'views/aanvraag/aanvragen.html',
+                controller: 'aanvraagController',
+                controllerAs: 'aanvraagCtrl'
             })
                 
             // CRUD Leveranciers
