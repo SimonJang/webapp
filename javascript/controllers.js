@@ -6,7 +6,6 @@
 (function() {
     angular.module('beheerApp')
         .controller('loginController', loginController)
-        .controller('homeController', homeController)
         .controller('leverancierController', leverancierController)
         .controller('leverancierCreateController', leverancierCreateController)
         .controller('leverancierDetailController', leverancierDetailController)
@@ -18,24 +17,6 @@
         .controller('levserviceCreateController', levserviceCreateController)
         .controller('aanvraagController', aanvraagController)
         .controller('levserviceEditController', levserviceEditController);
-
-    homeController.$inject = ['$location', 'loginService'];
-
-    function homeController($location, loginService) {
-        /*
-        var vm = this;
-        vm.flag = false;
-
-        if(loginService.isAuth()) {
-            vm.flag = true;
-        }
-
-        vm.subTitle = "Overzicht";
-        vm.logIn = function() {
-            $location.path('/login')
-        }
-        */
-    }
 
     /*
     Login methode signatuur veranderen want is nu enkel voor te testen
@@ -49,6 +30,7 @@
         vm.credentials = null;
 
         vm.flag = undefined;
+        vm.warning = false;
 
         if(loginService.isAuth()) {
             vm.flag = true;
@@ -63,24 +45,32 @@
         };
 
         vm.logIn = function() {
-            vm.credentials = $scope.userName + $scope.pw;
-            loginService.getPK()
-                .success(function(data) {
-                    var result = data[0].rsa;
-                    var pk = cryptico.generateRSAKey(vm.credentials, 1024);
-                    var pkString = cryptico.publicKeyString(pk);
+            var credentials = $scope.userName + $scope.pw;
+            if(!credentials) {
+                vm.warning = true;
+            }
+            else {
+                loginService.getPK()
+                    .success(function(data) {
+                        var result = data[0].rsa;
+                        var pk = cryptico.generateRSAKey(credentials, 1024);
+                        var pkString = cryptico.publicKeyString(pk);
 
-                    var finalResult = cryptico.decrypt(result,pk);
+                        var finalResult = cryptico.decrypt(result,pk);
 
-                    if(finalResult.plaintext == 'ok') {
-                        sessionStorage.setItem(['login'], pkString)
+                        if(finalResult.plaintext == 'ok') {
+                            sessionStorage.setItem(['login'], pkString)
 
-                    }
-                });
-            if(loginService.isAuth()) {
-                $window.location.reload();
-                $location.path('/home');
-                vm.flag=true;
+                        }
+                        else {
+                            vm.warning = true;
+                        }
+                    });
+                if(loginService.isAuth()) {
+                    $window.location.reload();
+                    $location.path('/aanvraag/todo');
+                    vm.flag=true;
+                }
             }
         };
         vm.logOff = function() {
@@ -421,10 +411,22 @@
             });
     }
 
-    aanvraagController.$inject = ['$scope', '$location'];
+    aanvraagController.$inject = ['$scope', '$location', 'aanvraagService', '$filter'];
 
-    function aanvraagController() {
+    function aanvraagController($scope, $location, aanvraagService, $filter) {
+        var vm = this;
 
+        vm.loc = $location.path()
+        vm.flag = vm.loc.indexOf('todo') == -1;
+
+        vm.aanvragen = {};
+        vm.aantal = {};
+        aanvraagService.getAanvragen()
+            .success(function(data) {
+                vm.aanvragen = data;
+                vm.aanvragen = $filter('aanvraagFilter')(vm.aanvragen, vm.flag);
+                vm.aantal = vm.aanvragen.length;
+            })
     }
 
 })();

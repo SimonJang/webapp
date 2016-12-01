@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "voornaam": "Ilja",
+    "familienaam": "De Mits",
+    "adres": {"straat": "Veldstraat 1", "gemeente": "9000"},
+    "emailAdres": "iljademits@metingapp.com",
+    "ean": "541448920700005980",
+    "type": "Elektriciteit",
+    "Nabo": {"levId": 1, "planId": 1},
+    "Oabo": {"levId": 2, "planId": 1},
+    "datum": "2016-11-23T18:25:43.511Z",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "voornaam": "Simon",
+    "familienaam": "Jang",
+    "adres": {"straat": "Veldstraat 2", "gemeente": "9000"},
+    "emailAdres": "simonjang@metingapp.com",
+    "ean": "541448920700005980",
+    "type": "Elektriciteit",
+    "Nabo": {"levId": 1, "planId": 1},
+    "Oabo": {"levId": 2, "planId": 1},
+    "datum": "2016-05-21T18:25:43.511Z",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "voornaam": "Kenneth",
+    "familienaam": "Moons",
+    "adres": {"straat": "Veldstraat 3", "gemeente": "9000"},
+    "emailAdres": "kennethmoons@metingapp.com",
+    "ean": "541448920700005980",
+    "type": "Elektriciteit",
+    "Nabo": {"levId": 1, "planId": 1},
+    "Oabo": {"levId": 2, "planId": 1},
+    "datum": "2016-10-21T18:25:43.511Z",
+    "completed": true
+  },
+  {
+    "id": 4,
+    "voornaam": "Benoît",
+    "familienaam": "Lagae",
+    "adres": {"straat": "Veldstraat 4", "gemeente": "9000"},
+    "emailAdres": "benoitlagae@metingapp.com",
+    "ean": "541448920700005980",
+    "type": "Elektriciteit",
+    "Nabo": {"levId": 1, "planId": 1},
+    "Oabo": {"levId": 2, "planId": 1},
+    "datum": "2016-01-23T18:25:43.511Z",
+    "completed": true
+  }
+]

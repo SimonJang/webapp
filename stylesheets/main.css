@@ -44,6 +44,24 @@ TODO OMVORMEN NAAR SASS of LESS
     display: block;
 }
 
+.warning-margin {
+    margin-top: 1em;
+}
+
 .graph {
     border-left: 1px solid darkgrey;
+}
+
+.circle {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+
+    -moz-border-radius: 10px; /* or 50% */
+    border-radius: 10px; /* or 50% */
+
+    background-color: red;
+    color: white;
+    text-align: center;
 }

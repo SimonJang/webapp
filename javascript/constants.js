@@ -10,5 +10,6 @@
         logUrl: 'data/log.json',
         tariefUrl: 'data/tarieven.json',
         userUrl: 'data/user.json',
+        aanvraagUrl: 'data/aanvragen.json'
     })
 })();

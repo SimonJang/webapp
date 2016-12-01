@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Aanvragen verwerken</title>
 </head>
 <body>
-
+    <div class="col-xs-4">
+        <div class="list-group">
+            <a ng-show="!aanvraagCtrl.flag" class="list-group-item active" ng-href="#/aanvraag/todo">Aanvragen goed te keuren <span class="circle">{{aanvraagCtrl.aantal}}</span></a>
+            <a ng-show="aanvraagCtrl.flag" class="list-group-item" ng-href="#/aanvraag/todo">Aanvragen goed te keuren <span class="circle">{{aanvraagCtrl.aantal}}</span></a>
+            <a ng-show="!aanvraagCtrl.flag"class="list-group-item" ng-href="#/aanvraag/ok">Uitgevoerde aanvragen</a>
+            <a ng-show="aanvraagCtrl.flag" class="list-group-item active" ng-href="#/aanvraag/ok">Uitgevoerde aanvragen</a>
+        </div>
+    </div>
+    <div class="col-xs-8 panel panel-default">
+        <div class="panel-body">
+            <h3 class="ph-custom-inline-no-top-padding">Overzicht aanvragen</h3>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th>Datum</th>
+                        <th>Type</th>
+                        <th></th>
+                    </tr>
+                    <tr ng-repeat="aanvraag in aanvraagCtrl.aanvragen">
+                        <td>{{aanvraag.datum | date:'medium'}}</td>
+                        <td>{{aanvraag.type}}</td>
+                        <td ng-show="!aanvraagCtrl.flag"><a ng-href="#/aanvraag/{{aanvraag.id}}">Goedkeuren</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

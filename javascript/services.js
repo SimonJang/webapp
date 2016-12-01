@@ -7,6 +7,7 @@
     'use strict';
     angular.module('beheerApp')
         .service('loginService', loginService)
+        .service('aanvraagService', aanvraagService)
         .service('leverancierService', leverancierService)
         .service('gebruikerService', gebruikerService)
         .service('logService', logService)
@@ -173,6 +174,21 @@
 
         service.getTariefById = function(id) {
             // TODO voor REST
+        };
+
+        return service;
+    }
+
+    aanvraagService.$inject = ['$http', 'GLOBALS']
+
+    function aanvraagService($http, GLOBALS) {
+        var service = {};
+
+        service.getAanvragen = function() {
+            return $http({
+                method: 'GET',
+                url: GLOBALS.aanvraagUrl
+            })
         };
 
         return service;

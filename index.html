@@ -19,7 +19,7 @@
     <script src="javascript/constants.js"></script>
     <script src="javascript/services.js"></script>
 </head>
-<body ng-controller="loginController as loginCtrl">
+<body ng-controller="loginController as loginCtrl" ng-cloak>
     <div class="jumbotron ph-custom">
         <h1 class="page-header ph-text-custom">Beheertool Meting applicatie<br /></h1>
     </div>
@@ -32,7 +32,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#/home">Overzicht</a>
+                    <a class="navbar-brand" href="#/aanvraag/todo">Overzicht</a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav" >
                     <ul class="nav navbar-nav" ng-show="loginCtrl.flag">
@@ -54,12 +54,12 @@
                         </li>
                         <li><a href="#/usersoverview">Overzicht gebruikers</a></li>
                         <li><a href="#/logs">Logboek transacties</a></li>
-                        <li><a href="#/overstap">Aanvragen <span class="redCirle">{{loginCtrl.aantal}}</span></a></li>
+                        <li><a href="#/aanvraag/todo">Aanvragen</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <button type="button" class="btn btn-default navbar-btn" ng-hide="loginCtrl.flag" ng-click="loginCtrl.gotologIn()">Log in</button>
                         <button type="button" class="btn btn-danger navbar-btn" ng-show="loginCtrl.flag" ng-click="loginCtrl.logOff()">Uitloggen</button>
-                        <li><p class="navbar-text" ng-show="homeCtrl.flag">Welkom Admin</p></li>
+                        <li><p class="navbar-text" ng-show="loginCtrl.flag" >Welkom Admin</p></li>
                     </ul>
                 </div>
             </div>

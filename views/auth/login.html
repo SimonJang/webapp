@@ -5,7 +5,10 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="col-xs-8 panel panel-default">
+    <div class="col-xs-8 col-xs-offset-2 panel panel-default">
+        <div ng-show="loginCtrl.warning" class="alert alert-danger warning-margin">
+            <p>Incorrecte gebruikersnaam en/of wachtwoord</p>
+        </div>
         <div class="panel-body">
             <h3 class="ph-custom-inline-no-top-padding">Login</h3>
             <div class="form-group">

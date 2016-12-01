@@ -6,6 +6,7 @@
 (function() {
     angular.module('beheerApp')
         .filter('typeFilter', typeFilter)
+        .filter('aanvraagFilter', aanvraagFilter)
         .filter('logFilter', logFilter);
 
     function typeFilter() {
@@ -52,7 +53,23 @@
             });
             filtered.sort(function(a,b) {
                 return new Date(b.datum) - new Date(a.datum);
-            })
+            });
+            return filtered;
+        };
+    };
+    
+    function aanvraagFilter() {
+        return function(aanvragen, bool) {
+            var filtered = [];
+            
+            angular.forEach(aanvragen, function(aanvraag) {
+                if(aanvraag.completed == bool) {
+                    filtered.push(aanvraag);
+                }
+            });
+            filtered.sort(function(a,b) {
+                return new Date(b.datum) - new Date(a.datum);
+            });
             return filtered;
         };
     };

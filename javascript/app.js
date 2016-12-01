@@ -5,7 +5,18 @@
 
 (function() {
     angular.module("beheerApp",['ngRoute', 'chart.js'])
-        .config(moduleConfig);
+        .config(moduleConfig)
+        .run(rootChange);
+
+    rootChange.$inject = ['$rootScope','$location'];
+
+    function rootChange($rootScope, $location) {
+        $rootScope.$on('$locationChangeStart', function(event, next, current) {
+            if (sessionStorage.getItem('login') == null) {
+                $location.path('/login')
+            }
+        })
+    }
     
     moduleConfig.$inject = ['$routeProvider'];
     
@@ -29,10 +40,16 @@
                 controller: 'loginController',
                 controllerAs: 'loginCtrl'
             })
+
+            // Aanvragen
                 
-                
-            .when('/aanvraag', {
-                temlateUrl: 'views/aanvraag/aanvragen.html',
+            .when('/aanvraag/todo', {
+                templateUrl: 'views/aanvraag/aanvragen.html',
+                controller: 'aanvraagController',
+                controllerAs: 'aanvraagCtrl'
+            })
+            .when('/aanvraag/ok', {
+                templateUrl: 'views/aanvraag/aanvragen.html',
                 controller: 'aanvraagController',
                 controllerAs: 'aanvraagCtrl'
             })
