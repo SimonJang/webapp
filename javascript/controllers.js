@@ -60,17 +60,14 @@
 
                         if(finalResult.plaintext == 'ok') {
                             sessionStorage.setItem(['login'], pkString)
-
+                            $window.location.reload();
+                            $location.path('/aanvraag/todo');
+                            vm.flag=true;
                         }
                         else {
                             vm.warning = true;
                         }
                     });
-                if(loginService.isAuth()) {
-                    $window.location.reload();
-                    $location.path('/aanvraag/todo');
-                    vm.flag=true;
-                }
             }
         };
         vm.logOff = function() {
