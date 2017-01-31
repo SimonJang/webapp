@@ -10,7 +10,6 @@
         .service('aanvraagService', aanvraagService)
         .service('leverancierService', leverancierService)
         .service('gebruikerService', gebruikerService)
-        .service('logService', logService)
         .service('tariefService', tariefService);
 
     loginService.$inject = ['$http', 'GLOBALS'];
@@ -47,8 +46,10 @@
         };
 
         service.getLeverancierById = function(id) {
-            // TODO voor REST, tijdelijke implementatie met lokale JSON
-
+            return $http({
+                method: 'GET',
+                url: GLOBALS.leverancierUrl + id
+            })
         };
         
         service.saveLeverancier = function(lev) {
@@ -96,67 +97,6 @@
         service.getGebruikerById = function(id) {
             // TODO voor REST
         };
-        return service;
-    }
-
-    logService.$inject = ['$http', 'GLOBALS'];
-
-    function logService($http, GLOBALS) {
-        var service = {};
-        service.maanden = ['januari', 'februari', 'maart', 'april','mei','juni','juli','augustus','september','oktober','november','december'];
-        service.types = ['Elektriciteit', 'Gas'];
-
-
-        service.getAllLogs = function() {
-            return $http({
-                method: 'GET',
-                url: GLOBALS.logUrl
-            })
-        };
-
-        service.getLogById = function(id) {
-            // TODO voor REST
-        };
-
-        service.analyseDateYear = function(logs) {
-            var filtered = [];
-            var currentDate = new Date()
-            var currentYear = currentDate.getFullYear()
-            logs.filter(function(log) {
-                var tempDate = new Date(log.datum);
-                if(tempDate.getFullYear() == currentYear) {
-                    filtered.push(log);
-                }
-            });
-            return filtered;
-        };
-
-        service.analyseMonths = function(logs) {
-            var filtered = service.analyseDateYear(logs);
-            var filteredMonths = null;
-            filteredMonths = [0,0,0,0,0,0,0,0,0,0,0,0];
-            for(var log in filtered) {
-                var tempDate = new Date(filtered[log].datum);
-                filteredMonths[tempDate.getMonth()] = filteredMonths[tempDate.getMonth()] + 1;
-            }
-            return filteredMonths;
-        };
-
-        service.analyseType = function(logs) {
-            var filtered = service.analyseDateYear(logs);
-            var filteredTypes = null;
-            filteredTypes = [0,0];
-            for(var log in filtered) {
-                if(filtered[log].type == 'Elektriciteit') {
-                    filteredTypes[0] += 1;
-                }
-                else if(filtered[log].type == 'Gas') {
-                    filteredTypes[1] += 1;
-                }
-            }
-            return filteredTypes;
-        };
-
         return service;
     }
     

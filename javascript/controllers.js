@@ -11,8 +11,6 @@
         .controller('leverancierDetailController', leverancierDetailController)
         .controller('gebruikerController', gebruikerController)
         .controller('gebruikerDetailController', gebruikerDetailController)
-        .controller('logController', logController)
-        .controller('logDetailController', logDetailController)
         .controller('levserviceController', levserviceController)
         .controller('levserviceCreateController', levserviceCreateController)
         .controller('aanvraagController', aanvraagController)
@@ -81,9 +79,9 @@
     Ophalen van leveranciers
      */
 
-    leverancierController.$inject = ['$scope','leverancierService'];
+    leverancierController.$inject = ['leverancierService'];
 
-    function leverancierController($scope,leverancierService) {
+    function leverancierController(leverancierService) {
         var vm = this;
         vm.types = ["Alle", "Elektriciteit", "Gas"];
         vm.selectE = false;
@@ -197,9 +195,9 @@
         }
     }
 
-    gebruikerController.$inject = ['$routeParams','$scope', 'gebruikerService', 'logService'];
+    gebruikerController.$inject = ['gebruikerService'];
 
-    function gebruikerController($routeParams,$scope, gebruikerService,logService) {
+    function gebruikerController(gebruikerService) {
         var vm = this;
 
         vm.getGebruikers = function() {
@@ -219,9 +217,9 @@
         }
     }
 
-    gebruikerDetailController.$inject = ['$routeParams', 'gebruikerService', 'logService'];
+    gebruikerDetailController.$inject = ['$routeParams', 'gebruikerService'];
 
-    function gebruikerDetailController($routeParams, gebruikerService, logService) {
+    function gebruikerDetailController($routeParams, gebruikerService) {
         var vm = this;
         vm.id = $routeParams.id;
 
@@ -230,19 +228,11 @@
                 var gebs = gebruikers;
                 vm.gebruiker = gebs[vm.id-1];
             });
-
-        logService.getAllLogs()
-            .success(function(logs) {
-                var allLogs = logs;
-                vm.logs = allLogs;
-            });
-        
-        
     }
 
-    levserviceController.$inject = ['$scope', "$routeParams", "tariefService", "leverancierService"];
+    levserviceController.$inject = ["tariefService"];
 
-    function levserviceController($scope, $routeParams, tariefService, leverancierService) {
+    function levserviceController(tariefService) {
         var vm = this;
         
         vm.getTarieven = function() {
@@ -261,9 +251,9 @@
         }
     }
 
-    levserviceCreateController.$inject = ['$scope','$location','tariefService', 'leverancierService'];
+    levserviceCreateController.$inject = ['leverancierService'];
 
-    function levserviceCreateController($scope,$location,tariefService, leverancierService) {
+    function levserviceCreateController(leverancierService) {
         var vm = this;
         leverancierService.getLeveranciers()
             .success(function(leveranciers) {
@@ -277,9 +267,9 @@
         vm.provider = temp !== null ? temp.provider : undefined;
     }
 
-    levserviceEditController.$inject = ['$routeParams','$scope', '$location', 'tariefService'];
+    levserviceEditController.$inject = ['$routeParams','tariefService'];
 
-    function levserviceEditController($routeParams,$scope, $location, tariefService) {
+    function levserviceEditController($routeParams,tariefService) {
         var vm = this;
         vm.id = $routeParams.id;
         tariefService.getTarieven()
