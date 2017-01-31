@@ -5,7 +5,7 @@
 
 (function() {
     angular.module('beheerApp').constant('GLOBALS', {
-        leverancierUrl: 'data/leveranciers.json',
+        leverancierUrl: 'http://metingrest.azurewebsites.net/api/leveranciers',
         gebruikerUrl: 'data/gebruikers.json',
         logUrl: 'data/log.json',
         tariefUrl: 'data/tarieven.json',

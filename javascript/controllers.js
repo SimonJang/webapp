@@ -78,7 +78,7 @@
     }
 
     /*
-    Retrieve controller
+    Ophalen van leveranciers
      */
 
     leverancierController.$inject = ['$scope','leverancierService'];
@@ -99,9 +99,6 @@
                 })
         };
 
-        // TODO?
-        // Wordt momenteel niet gebruikt, inline filtering met Angular in de plaats
-
         vm.getLeverancierByName = function(name) {
             leverancierService.getLeveranciers()
                 .then(function(leveranciers) {
@@ -120,27 +117,6 @@
         vm.clearSelection = function() {
             vm.leveranciers = undefined;
             vm.selectedLeveranciers = undefined;
-        };
-
-        vm.onTypeChange = function() {
-            vm.leveranciers = null;
-            var currentSelected = $scope.selectedType;
-            leverancierService.getLeveranciers()
-                .success(function(leveranciers) {
-                    if(currentSelected !== null && currentSelected === "Elektriciteit") {
-                        vm.leveranciers = leveranciers.filter(function(obj) {
-                            return obj.type.indexOf(currentSelected) !== -1;
-                        })
-                    }
-                    else if(currentSelected !== null && currentSelected === "Gas") {
-                        vm.leveranciers = leveranciers.filter(function(obj) {
-                            return obj.type.indexOf(currentSelected) !== -1
-                        })
-                    }
-                    else {
-                        vm.leveranciers = leveranciers;
-                    }
-                })
         };
     }
 
