@@ -95,7 +95,10 @@
         };
 
         service.getGebruikerById = function(id) {
-            // TODO voor REST
+            return $http({
+                method: 'GET',
+                url: GLOBALS.gebruikerUrl+id
+            })
         };
         return service;
     }
@@ -118,6 +121,10 @@
                 url: GLOBALS.tariefUrl+id
             })
         };
+
+        service.saveTarief = function(tarief) {
+            // TODO
+        }
 
         return service;
     }

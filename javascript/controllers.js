@@ -279,9 +279,9 @@
             });
     }
 
-    aanvraagController.$inject = ['$location', 'aanvraagService', '$filter'];
+    aanvraagController.$inject = ['$location', 'aanvraagService', 'tariefService'];
 
-    function aanvraagController($location, aanvraagService, $filter) {
+    function aanvraagController($location, aanvraagService,tariefService ) {
         var vm = this;
 
         vm.loc = $location.path();
@@ -289,11 +289,24 @@
 
         vm.aanvragen = {};
         vm.aantal = {};
+        vm.tarieven = {};
         aanvraagService.getAanvragen()
             .success(function(data) {
                 vm.aanvragen = data;
                 vm.aantal = vm.aanvragen.length;
-            })
+            });
+        tariefService.getTarieven().success(function(data) {
+            vm.tarieven = data;
+        });
+        
+        for(aanvraag in vm.aanvragen) {
+            for(tarief in vm.tarieven) {
+                if(aanvraag.tariefPlanId == tarief.id) {
+                    aanvraag.tarief = tarief.naam
+                }
+            }
+        }
+        
     }
 
 })();

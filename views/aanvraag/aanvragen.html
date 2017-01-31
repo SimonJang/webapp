@@ -17,12 +17,12 @@
             <div class="table-responsive">
                 <table class="table">
                     <tr>
-                        <th>Datum</th>
-                        <th>Type</th>
+                        <th>e-mail</th>
+                        <th>tariefplan</th>
                     </tr>
                     <tr ng-repeat="aanvraag in aanvraagCtrl.aanvragen">
-                        <td>{{aanvraag.datum | date:'medium'}}</td>
-                        <td>{{aanvraag.type}}</td>
+                        <td>{{aanvraag.email}}</td>
+                        <td>{{aanvraag.tarief}}</td>
                     </tr>
                 </table>
             </div>
