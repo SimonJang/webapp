@@ -26,14 +26,13 @@
             </div>
             <div class="form-group ph-custom-inline-no-top-padding">
                 <label for="selectedProvider">Leverancier</label>
-                <select class="form-control" id="selectedProvider" ng-model="selectedType">
-                    <option ng-repeat="provider in levserviceCreateCtrl.providers"
-                            ng-attr-selected="levserviceCreateController.provider === provider.naam ? 'selected' : undefined">
+                <select class="form-control" id="selectedProvider" ng-model="providerID">
+                    <option ng-repeat="provider in levserviceCreateCtrl.providers" value="{{provider.id}}">
                         {{provider.naam}}
                     </option>
                 </select>
             </div>
-            <button ng-click="levserviceCreateController.saveTarief()" class="btn btn-info">Opslaan</button>
+            <button ng-click="levserviceCreateCtrl.saveTarief()" class="btn btn-info">Opslaan</button>
         </form>
     </div>
 </div>

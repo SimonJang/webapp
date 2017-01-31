@@ -65,8 +65,10 @@
         };
 
         service.saveTarief = function(tarief) {
-            // TODO
-        }
+            tarief.discriminator = "EnergieTariefplan";
+            tarief.groen = tarief.groen ? tarief.groen : false;
+            $http.post(GLOBALS.tariefUrl, tarief)
+        };
 
         return service;
     }
@@ -88,6 +90,8 @@
                 url: GLOBALS.gebruikerUrl+id
             })
         };
+
+
         return service;
     }
     
@@ -111,8 +115,9 @@
         };
 
         service.saveTarief = function(tarief) {
-            // TODO
-        }
+            tarief.discriminator = "EnergieTariefplan";
+            $http.post(GLOBALS.tariefUrl, tarief)
+        };
 
         return service;
     }

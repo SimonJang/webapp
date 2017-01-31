@@ -152,19 +152,6 @@
                 vm.leverancier = leverancier
             });
 
-        tariefService.getTarieven()
-            .success(function(tarieven) {
-                var tars = tarieven;
-                vm.tarieven = tars.filter(function(obj) {
-                    return obj.provider == vm.leverancier.naam;
-                });
-            })
-            .error(function(err) {
-                vm.error = err;
-                vm.errorMsg = "Something went wrong";
-            });
-
-
         vm.saveChanges = function() {
             var lev = {};
             lev.naam = $scope.naamLev;
@@ -246,9 +233,9 @@
         }
     }
 
-    levserviceCreateController.$inject = ['leverancierService','$location'];
+    levserviceCreateController.$inject = ['leverancierService','$location', '$scope'];
 
-    function levserviceCreateController(leverancierService,$location) {
+    function levserviceCreateController(leverancierService,$location, $scope) {
         var vm = this;
         leverancierService.getLeveranciers()
             .success(function(leveranciers) {
@@ -258,6 +245,19 @@
                 vm.error = err;
                 vm.errorMsg = "Er is iets gout gegaan";
             });
+
+        vm.saveTarief = function() {
+            var tarief = {};
+            tarief.naam = $scope.naamTarief
+            tarief.basisprijs = $scope.basisPrijs;
+            tarief.groen = $scope.isGroen;
+            tarief.leverancier = {};
+            tarief.leverancier.id = $scope.providerID;
+
+            leverancierService.saveTarief(tarief);
+            $location.path('/zoeklevservice');
+
+        };
 
         vm.onCreateLeverancier = function() {
             $location.path('/createleverancier');
