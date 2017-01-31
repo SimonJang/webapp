@@ -57,22 +57,22 @@
             // CRUD Leveranciers
 
             .when('/zoekleverancier', {
-                templateUrl: 'views/leveranciersearch.html',
+                templateUrl: 'views/beheerlev/leveranciersearch.html',
                 controller: 'leverancierController',
                 controllerAs: 'leverancierCtrl'
             })
             .when('/detailleverancier/:id', {
-                templateUrl: 'views/leverancierdetails.html',
+                templateUrl: 'views/beheerlev/leverancierdetails.html',
                 controller: 'leverancierDetailController',
                 controllerAs: 'leverancierDetailCtrl'
             })
             .when('/detailleverancier/edit/:id', {
-                templateUrl: 'views/leverancieredit.html',
+                templateUrl: 'views/beheerlev/leverancieredit.html',
                 controller: 'leverancierDetailController',
                 controllerAs: 'leverancierDetailCtrl'
             })
             .when('/createleverancier', {
-                templateUrl: 'views/createleverancier.html',
+                templateUrl: 'views/beheerlev/createleverancier.html',
                 controller: 'leverancierCreateController',
                 controllerAs: 'leverancierCreateCtrl'
             })
@@ -80,32 +80,32 @@
             // CRUD tarieven
 
             .when('/detaillevservice/:id', {
-                templateUrl: "views/edittariefplan.html",
+                templateUrl: "views/beheertarief/edittariefplan.html",
                 controller: "levserviceEditController",
                 controllerAs: "levserviceEditCtrl"
             })
             .when('/zoeklevservice', {
-                templateUrl: 'views/levservicesearch.html',
+                templateUrl: 'views/beheertarief/levservicesearch.html',
                 controller: 'levserviceController',
                 controllerAs: 'levserviceCtrl'
             })
             .when('/createabonnement', {
-                templateUrl: "views/createtariefplan.html",
+                templateUrl: "views/beheertarief/createtariefplan.html",
                 controller: 'levserviceCreateController',
                 controllerAs: 'levserviceCreateCtrl'
             })
             .when('/editabonnement/:id', {
-                templateUrl: "views/edittariefplan.html",
+                templateUrl: "views/beheertarief/edittariefplan.html",
                 controlller: 'levserviceEditController',
                 controllerAs: 'levserviceEditCtrl'
             })
             .when('/overzichtlevservice/:id', {
-                templateUrl: 'views/overzichtlevservice.html',
+                templateUrl: 'views/beheertarief/overzichtlevservice.html',
                 controller: 'leverancierDetailController',
                 controllerAs: 'leverancierDetailCtrl'
             })
             .when('/createabonnement/:id', {
-                templateUrl: 'views/createtariefplanprovider.html',
+                templateUrl: 'views/beheertarief/createtariefplanprovider.html',
                 controller: 'leverancierDetailController',
                 controllerAs: 'leverancierDetailCtrl'
             })
@@ -113,12 +113,12 @@
             // CRUD users
 
             .when('/usersoverview', {
-                templateUrl: 'views/useroverview.html',
+                templateUrl: 'views/users/useroverview.html',
                 controller: 'gebruikerController',
                 controllerAs: 'gebruikerCtrl'
             })
             .when('/userdetails/:id', {
-                templateUrl: 'views/userdetails.html',
+                templateUrl: 'views/users/userdetails.html',
                 controller: 'gebruikerDetailController',
                 controllerAs: 'gebruikerDetailCtrl'
             })
