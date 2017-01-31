@@ -30,7 +30,7 @@
             <tr ng-repeat="tarief in levserviceCtrl.tarieven | orderBy: 'tarief.basisprijs' |filter:search">
                 <td>{{tarief.naam}}</td>
                 <td>{{tarief.basisprijs}}</td>
-                <td>{{tarief.provider}}</td>
+                <td>{{tarief.leverancier.naam}}</td>
                 <td>
                     <span ng-if="tarief.groen === true" class="glyphicon glyphicon-ok"></span>
                     <span ng-if="tarief.groen === false" class="glyphicon glyphicon-remove"></span>

@@ -143,10 +143,9 @@
         var vm = this;
         vm.leverancier = {};
         vm.id = $routeParams.id;
-        leverancierService.getLeveranciers()
-            .success(function(leveranciers) {
-                vm.leveranciers = leveranciers;
-                vm.leverancier = leveranciers[vm.id-1];
+        leverancierService.getLeverancierById(vm.id)
+            .success(function(leverancier) {
+                vm.leverancier = leverancier
             });
 
         tariefService.getTarieven()
@@ -166,13 +165,6 @@
             var lev = {};
             lev.naam = $scope.naamLev;
             lev.website = $scope.websiteLev;
-            lev.types = [];
-            if(typeof $scope.typeE !== 'undefined') {
-                lev.types.push("Elektriciteit");
-            }
-            if(typeof $scope.typeG !== 'undefined') {
-                lev.types.push("Gas");
-            }
             leverancierService.saveLeverancier(lev)
         };
         
