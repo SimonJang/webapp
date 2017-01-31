@@ -8,6 +8,6 @@
         gebruikerUrl: 'http://metingrest.azurewebsites.net/api/gebruikers/',
         tariefUrl: 'http://metingrest.azurewebsites.net/api/tariefplannen/',
         userUrl: 'data/user.json',
-        aanvraagUrl: 'http://metingrest.azurewebsites.net/api/aanvragen/'
+        aanvraagUrl: 'http://metingrest.azurewebsites.net/api/aanvragen'
     })
 })();

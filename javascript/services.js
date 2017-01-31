@@ -113,7 +113,10 @@
         };
 
         service.getTariefById = function(id) {
-            // TODO voor REST
+            return $http({
+                method: 'GET',
+                url: GLOBALS.tariefUrl+id
+            })
         };
 
         return service;

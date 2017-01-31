@@ -279,12 +279,12 @@
             });
     }
 
-    aanvraagController.$inject = ['$scope', '$location', 'aanvraagService', '$filter'];
+    aanvraagController.$inject = ['$location', 'aanvraagService', '$filter'];
 
-    function aanvraagController($scope, $location, aanvraagService, $filter) {
+    function aanvraagController($location, aanvraagService, $filter) {
         var vm = this;
 
-        vm.loc = $location.path()
+        vm.loc = $location.path();
         vm.flag = vm.loc.indexOf('todo') == -1;
 
         vm.aanvragen = {};
@@ -292,7 +292,6 @@
         aanvraagService.getAanvragen()
             .success(function(data) {
                 vm.aanvragen = data;
-                vm.aanvragen = $filter('aanvraagFilter')(vm.aanvragen, vm.flag);
                 vm.aantal = vm.aanvragen.length;
             })
     }
