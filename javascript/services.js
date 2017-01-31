@@ -54,7 +54,7 @@
         
         service.saveLeverancier = function(lev) {
             service.temp = null;
-            // TODO voor REST
+            $http.post(GLOBALS.leverancierUrl, lev)
         };
         
         service.tempSave = function(tempLev) {
@@ -62,18 +62,6 @@
             var d = new Date();
             service.temp.createdOn = d.getTime();
             d = null;
-        };
-        
-        service.getTemp = function() {
-            var d = new Date();
-            var checker = d.getTime();
-            if(checker - (5 * 60 * 1000) > service.temp.createdOn) {
-                service.temp = null;
-                return service.temp;
-            }
-            else {
-                return service.temp;
-            }
         };
 
         service.saveTarief = function(tarief) {

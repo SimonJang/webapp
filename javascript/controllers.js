@@ -124,11 +124,15 @@
         var vm = this;
         vm.temp = null;
         vm.onCreateLevService = function() {
-            var temp = {};
-            temp.naam = $scope.naamLev;
-            temp.website = $scope.websiteLev;
-            leverancierService.tempSave(temp);
             $location.path('/createabonnement');
+        };
+
+        vm.createLeverancier = function() {
+            var lev = {};
+            lev.naam = $scope.naamLev;
+            lev.website = $scope.websiteLev;
+            leverancierService.saveLeverancier(lev);
+            $location.path('/zoekleverancier');
         }
         
     }
@@ -180,7 +184,7 @@
         };
 
         vm.onCreateLevService = function() {
-            $location.path('/createabonnement/' + vm.id);
+            $location.path('/createabonnement');
         }
     }
 
@@ -242,9 +246,9 @@
         }
     }
 
-    levserviceCreateController.$inject = ['leverancierService'];
+    levserviceCreateController.$inject = ['leverancierService','$location'];
 
-    function levserviceCreateController(leverancierService) {
+    function levserviceCreateController(leverancierService,$location) {
         var vm = this;
         leverancierService.getLeveranciers()
             .success(function(leveranciers) {
@@ -254,8 +258,10 @@
                 vm.error = err;
                 vm.errorMsg = "Er is iets gout gegaan";
             });
-        var temp = leverancierService.getTemp();
-        vm.provider = temp !== null ? temp.provider : undefined;
+
+        vm.onCreateLeverancier = function() {
+            $location.path('/createleverancier');
+        };
     }
 
     levserviceEditController.$inject = ['$routeParams','tariefService'];
@@ -280,6 +286,10 @@
         vm.loc = $location.path();
         vm.flag = vm.loc.indexOf('todo') == -1;
 
+        tariefService.getTarieven().success(function(data) {
+            vm.tarieven = data;
+        });
+
         vm.aanvragen = {};
         vm.aantal = {};
         vm.tarieven = {};
@@ -287,18 +297,18 @@
             .success(function(data) {
                 vm.aanvragen = data;
                 vm.aantal = vm.aanvragen.length;
-            });
-        tariefService.getTarieven().success(function(data) {
-            vm.tarieven = data;
-        });
-        
-        for(aanvraag in vm.aanvragen) {
-            for(tarief in vm.tarieven) {
-                if(aanvraag.tariefPlanId == tarief.id) {
-                    aanvraag.tarief = tarief.naam
+
+                for(aanvraag in vm.aanvragen) {
+                    for(tarief in vm.tarieven) {
+                        if(aanvraag.tariefPlanId == tarief.id) {
+                            aanvraag.tarief = tarief.naam
+                        }
+                    }
                 }
-            }
-        }
+            });
+
+        
+
         
     }
 
