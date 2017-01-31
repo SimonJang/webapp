@@ -127,9 +127,6 @@
             var temp = {};
             temp.naam = $scope.naamLev;
             temp.website = $scope.websiteLev;
-            temp.types = [];
-            temp.types.push($scope.typeE);
-            temp.types.push($scope.typeG);
             leverancierService.tempSave(temp);
             $location.path('/createabonnement');
         }
@@ -230,6 +227,8 @@
             });
     }
 
+    /* Controller voor het aanpassen van de tarieven*/
+
     levserviceController.$inject = ["tariefService"];
 
     function levserviceController(tariefService) {
@@ -278,6 +277,8 @@
                 vm.tarief = tars[vm.id - 1];
             });
     }
+
+    /* Controller voor het beheren van aanvragen */
 
     aanvraagController.$inject = ['$location', 'aanvraagService', 'tariefService'];
 

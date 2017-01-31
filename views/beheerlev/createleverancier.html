@@ -21,19 +21,6 @@
                             <label for="websiteLeverancier">Website Leverancier</label>
                             <input type="text" class="form-control" id="websiteLeverancier" ng-model="websiteLev">
                         </div>
-                        <div class="checkbox">
-                            <h4>Diensten</h4>
-                            <label><input type="checkbox" id="elektriciteit" ng-model="typeE">Elektriciteit</label><br/>
-                            <label><input type="checkbox" id="gas" ng-model="typeG">Gas</label>
-                        </div>
-                        <div>
-                            <h4>Abonnementen</h4>
-                            <span class="warning-span" ng-hide="leverancierCreateCtrl.temp.tariefplannen"><b>Er zijn nog geen tariefplannen</b></span><br/>
-                            <ul ng-show="leverancierCreateCtrl.temp">
-                                <li>no show test</li>
-                            </ul>
-                            <a ng-click="leverancierCreateCtrl.onCreateLevService()" class="btn btn-info">Nieuw tariefplan</a>
-                        </div>
                     </form>
             </div>
         </div>
