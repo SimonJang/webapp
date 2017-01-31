@@ -123,23 +123,5 @@
                 controllerAs: 'gebruikerDetailCtrl'
             })
 
-            // CRUD logs
-
-            .when('/logs', {
-                templateUrl: 'views/logboek.html',
-                controller: 'logController',
-                controllerAs: 'logCtrl'
-            })
-            .when('/detailtransactie/:id', {
-                templateUrl: 'views/logdetails.html',
-                controller: 'logDetailController',
-                controllerAs: 'logDetailCtrl'
-            })
-            .when('/logsuser/:id', {
-                templateUrl: 'views/logboekuser.html',
-                controller: 'gebruikerDetailController',
-                controllerAs: 'gebruikerDetailCtrl'
-            });
-
     }
 })();

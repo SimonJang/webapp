@@ -15,13 +15,6 @@
                     <label for="naamLeverancier">Naam Leverancier</label>
                     <input type="text" class="form-control" id="naamLeverancier" placeholder="Naam leverancier" ng-model="search.naam">
                 </div>
-                <div class="form-group">
-                    <label for="typeSelector">Filter op type dienstverlening leverancier</label>
-                <select class=form-control id="typeSelector" ng-change="leverancierCtrl.onTypeChange()" ng-model="selectedType">
-                    <option ng-repeat="type in leverancierCtrl.types">{{type}}</option>
-                </select>
-                </div>
-                <!-- <button ng-click="leverancierCtrl.getLeverancierByName()" type="button" class="btn btn-default">Zoek leverancier</button> -->
                 <button ng-click="leverancierCtrl.getLeveranciers()" type="button" class="btn btn-default">Zoek alle leveranciers</button>
                 <button ng-click="leverancierCtrl.clearSelection()" type="button" class="btn btn-danger">Reset</button>
             </form>
