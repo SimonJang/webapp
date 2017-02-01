@@ -155,8 +155,10 @@
         vm.saveChanges = function() {
             var lev = {};
             lev.naam = $scope.naamLev;
+            lev.id =  vm.leverancier.id;
             lev.website = $scope.websiteLev;
             leverancierService.saveLeverancier(lev)
+            $location.path('/zoekleverancier');
         };
         
         vm.saveTarief = function() {
@@ -264,9 +266,9 @@
         };
     }
 
-    levserviceEditController.$inject = ['$routeParams','tariefService'];
+    levserviceEditController.$inject = ['$routeParams','tariefService','$location','$scope'];
 
-    function levserviceEditController($routeParams,tariefService) {
+    function levserviceEditController($routeParams,tariefService, $location,$scope) {
         var vm = this;
         vm.id = $routeParams.id;
         tariefService.getTarieven()
@@ -274,6 +276,16 @@
                 var tars = tarieven;
                 vm.tarief = tars[vm.id - 1];
             });
+
+        vm.saveTarief = function() {
+            var nieuwTarief = vm.tarief;
+            nieuwTarief.naam = $scope.naamTarief;
+            nieuwTarief.basisprijs = $scope.basisPrijs;
+            nieuwTarief.groen = $scope.isGroen;
+
+            tariefService.saveTarief(nieuwTarief);
+            $location.path('/zoeklevservice');
+        }
     }
 
     /* Controller voor het beheren van aanvragen */

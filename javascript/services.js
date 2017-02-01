@@ -66,7 +66,7 @@
 
         service.saveTarief = function(tarief) {
             tarief.discriminator = "EnergieTariefplan";
-            tarief.groen = tarief.groen ? tarief.groen : false;
+            tarief.groen = typeof tarief.groen !== 'undefined' ? tarief.groen : false;
             $http.post(GLOBALS.tariefUrl, tarief)
         };
 
